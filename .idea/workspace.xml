@@ -54,7 +54,8 @@
       <workItem from="1586429644217" duration="5000" />
       <workItem from="1586430221017" duration="35000" />
       <workItem from="1586430317998" duration="4000" />
-      <workItem from="1586430620327" duration="3000" />
+      <workItem from="1586430620327" duration="118000" />
+      <workItem from="1586431312690" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1586344986398</created>
@@ -84,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586430241492</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create a mission class">
+      <created>1586430634328</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586430634328</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,14 +105,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="create a mission class" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="259" y="5" key="CommitChangelistDialog2" timestamp="1586430240989">
+    <state x="259" y="5" key="CommitChangelistDialog2" timestamp="1586430633871">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="259" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586430240989" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586430246546">
+    <state x="259" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586430633871" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586430641736">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586430246546" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586430641736" />
     <state x="209" y="11" key="new project wizard" timestamp="1586427239770">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
