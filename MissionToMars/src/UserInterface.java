@@ -14,9 +14,9 @@ public class UserInterface {
         System.out.println("--- Please enter your login credentials");
     }
 
-    public void displayAdministratorScreen(Administrator administrator){
+    public void displayAdministratorScreen(Account account){
         System.out.println("\n");
-        System.out.println("******* Welcome"+ administrator.getUserName() +" to Mission to Mars System! *******");
+        System.out.println("******* Welcome "+ account.getUserName() +" to Mission to Mars System! *******");
         System.out.println("Account type: Administrator");
         System.out.println("--- Please enter the number below to select your option ");
         System.out.println("--- 1.View existing missions");
@@ -30,9 +30,9 @@ public class UserInterface {
 
 
     }
-    public void displayMissionCoordinatorScreen(MissionCoordinator missionCoordinator){
+    public void displayMissionCoordinatorScreen(Account account){
         System.out.println("\n");
-        System.out.println("******* Welcome"+ missionCoordinator.getUserName() +" to Mission to Mars System! *******");
+        System.out.println("******* Welcome "+ account.getUserName() +" to Mission to Mars System! *******");
         System.out.println("Account type: Administrator");
         System.out.println("--- Please enter the number below to select your option ");
         System.out.println("--- 1.Create new mission");
