@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FIT5136_S1_2020_11.iml" filepath="$PROJECT_DIR$/FIT5136_S1_2020_11.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mission to Mars/Mission to Mars.iml" filepath="$PROJECT_DIR$/Mission to Mars/Mission to Mars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MissionToMars/MissionToMars.iml" filepath="$PROJECT_DIR$/MissionToMars/MissionToMars.iml" />
     </modules>
   </component>
 </project>
