@@ -1,4 +1,4 @@
 Haoran Zhang,123,Haoranbackup1@gmail.com,Administrator
 Michael,123,1@gmail.com,Mission Coordinator
-Jessie,123,2@gmail.com,Mission Coordinator
+Jessie,123,2@gmail.com,Administrator
 June,123,Haoranbackup1@gmail.com,Mission Coordinator

@@ -71,40 +71,16 @@ public class MissionToMarsSystem {
                 missionCoordinatorMenuControl(currentAccount);
             }
             else if(currentAccount.getRole().equals("Administrator")){
-                userInterface.displayAdministratorScreen(currentAccount);
-                switch (userIntegerInput()){
-                    case 1:
-                        viewExistingMission(currentAccount);
-                        break;
-                    case 2:
-                        editMissionRequest();
-                        break;
-                    case 3:
-                        selectShuttle();
-                        break;
-                    case 4:
-                        createSelectionCriteria();
-                        break;
-                    case 5:
-                        editSelectionCriteria();
-                        break;
-                    case 6:
-                        findBestCandidate();
-                        break;
-                    case 7:
-                       logout();
-                        break;
-                    default:
-                        System.out.println("Please enter the valid number");
-                        break;
+                    administratorMenuControl(currentAccount);
                 }
             }
-        }
+
         else {
             System.out.println("Your username or password is incorrect. Please try again");
             login();
         }
-        }
+    }
+
 
     public void createMissionRequest() {
         UserInterface userInterface = new UserInterface();
@@ -117,10 +93,12 @@ public class MissionToMarsSystem {
     }
     public void viewExistingMission(Account account) {
         UserInterface userInterface = new UserInterface();
-        userInterface.displayAllMissionNameList(account);
+        userInterface.displayAllMissionNameList(account,"view");
 
     }
-    public void editMissionRequest() {
+    public void editMissionRequest(Account account) {
+        UserInterface userInterface = new UserInterface();
+        userInterface.displayAllMissionNameList(account,"edit");
     }
     public void logout() {
         System.out.println("Quitting the system");
@@ -219,6 +197,8 @@ public class MissionToMarsSystem {
         }
     }
 
+
+
     public void missionCoordinatorMenuControl(Account account){
         UserInterface userInterface = new UserInterface();
         userInterface.displayMissionCoordinatorScreen(account);
@@ -232,7 +212,7 @@ public class MissionToMarsSystem {
                 missionCoordinatorMenuControl(account);
                 break;
             case 3:
-                editMissionRequest();
+                editMissionRequest(account);
                 missionCoordinatorMenuControl(account);
                 break;
             case 4:
@@ -244,5 +224,93 @@ public class MissionToMarsSystem {
     }
     }
 
+    public void administratorMenuControl(Account account){
+        UserInterface userInterface = new UserInterface();
+        userInterface.displayAdministratorScreen(account);
+        switch (userIntegerInput()){
+            case 1:
+                viewExistingMission(account);
+                administratorMenuControl(account);
+                break;
+            case 2:
+                editMissionRequest(account);
+                administratorMenuControl(account);
+                break;
+            case 3:
+                selectShuttle();
+                break;
+            case 4:
+                createSelectionCriteria();
+                break;
+            case 5:
+                editSelectionCriteria();
+                break;
+            case 6:
+                findBestCandidate();
+                break;
+            case 7:
+                logout();
+                break;
+            default:
+                System.out.println("Please enter the valid number");
+                break;
+    }
 
+}
+
+    public void modifyFile(String filePath, String oldString, String newString)
+    {
+        File fileToBeModified = new File(filePath);
+
+        String oldContent = "";
+
+        BufferedReader reader = null;
+
+        FileWriter writer = null;
+
+        try
+        {
+            reader = new BufferedReader(new FileReader(fileToBeModified));
+
+            //Reading all the lines of input text file into oldContent
+
+            String line = reader.readLine();
+
+            while (line != null)
+            {
+                oldContent = oldContent + line + System.lineSeparator();
+
+                line = reader.readLine();
+            }
+
+            //Replacing oldString with newString in the oldContent
+
+            String newContent = oldContent.replaceAll(oldString, newString);
+
+            //Rewriting the input text file with newContent
+
+            writer = new FileWriter(fileToBeModified);
+
+            writer.write(newContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                //Closing the resources
+
+                reader.close();
+
+                writer.close();
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+    }
 }

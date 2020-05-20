@@ -30,6 +30,20 @@ public class MissionRequest {
         this.status = status;
     }
 
+    public MissionRequest(MissionRequest missionRequest) {
+        this.name = missionRequest.name;
+        this.description = missionRequest.description;
+        this.country = missionRequest.country;
+        this.job = missionRequest.job;
+        this.missionCoordinator = missionRequest.missionCoordinator;
+        this.listOfEmployment = missionRequest.listOfEmployment;
+        this.listOfCargo = missionRequest.listOfCargo;
+        this.launchDate = missionRequest.launchDate;
+        this.destination = missionRequest.destination;
+        this.duration = missionRequest.duration;
+        this.status = missionRequest.status;
+    }
+
     public String getName() {
         return name;
     }
@@ -116,5 +130,24 @@ public class MissionRequest {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    public String getRecord(){
+        return this.getName()+
+                ","+this.getDescription()+
+                ","+this.getCountry().getCountryOrigin()+
+                ","+this.getCountry().getCountryAllowed()+
+                ","+this.getMissionCoordinator().getName()+
+                ","+this.getMissionCoordinator().getContactInfo()+
+                ","+this.getJob().getName()+
+                ","+this.getJob().getDescription()+
+                ","+this.getListOfEmployment().get(0).getTitle()+
+                ","+this.getListOfEmployment().get(0).getNumberRequired()+
+                ","+this.getListOfCargo().get(0).getCargoFor()+
+                ","+this.getListOfCargo().get(0).getCargoRequired()+
+                ","+this.getListOfCargo().get(0).getQuantityRequired()+
+                ","+this.getLaunchDate()+
+                ","+this.getDestination()+
+                ","+this.getDuration()+
+                ","+this.getStatus();
     }
 }
