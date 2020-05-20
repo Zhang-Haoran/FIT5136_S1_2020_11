@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Candidate extends Account {
     private String name;
-    private Date dateOfBirth;
+    private String dateOfBirth;
     private String address;
     private String nationality;
     private String id;
@@ -27,11 +26,11 @@ public class Candidate extends Account {
         this.name = name;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -123,7 +122,7 @@ public class Candidate extends Account {
         this.languageSpoken = languageSpoken;
     }
 
-    public Candidate(String name, Date dateOfBirth, String address, String nationality, String id, String gender, ArrayList<String> allergy, ArrayList<String> foodPreference, ArrayList<String> qualification, int workExperience, ArrayList<String> occupation, String computerSkill, ArrayList<String> languageSpoken) {
+    public Candidate(String name, String dateOfBirth, String address, String nationality, String id, String gender, ArrayList<String> allergy, ArrayList<String> foodPreference, ArrayList<String> qualification, int workExperience, ArrayList<String> occupation, String computerSkill, ArrayList<String> languageSpoken) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.address = address;

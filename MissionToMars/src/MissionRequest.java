@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Date;
 
 public class MissionRequest {
     private String name;
@@ -9,7 +8,7 @@ public class MissionRequest {
     private MissionCoordinator missionCoordinator;
     private ArrayList<Employment> listOfEmployment;
     private ArrayList<Cargo> listOfCargo;
-    private Date launchDate;
+    private String launchDate;
     private String destination;
     private String duration;
     private String status;
@@ -17,7 +16,7 @@ public class MissionRequest {
     public MissionRequest() {
     }
 
-    public MissionRequest(String name, String description, Country country, Job job, MissionCoordinator missionCoordinator, ArrayList<Employment> listOfEmployment, ArrayList<Cargo> listOfCargo, Date launchDate, String destination, String duration, String status) {
+    public MissionRequest(String name, String description, Country country, Job job, MissionCoordinator missionCoordinator, ArrayList<Employment> listOfEmployment, ArrayList<Cargo> listOfCargo, String launchDate, String destination, String duration, String status) {
         this.name = name;
         this.description = description;
         this.country = country;
@@ -87,11 +86,11 @@ public class MissionRequest {
         this.listOfCargo = listOfCargo;
     }
 
-    public Date getLaunchDate() {
+    public String getLaunchDate() {
         return launchDate;
     }
 
-    public void setLaunchDate(Date launchDate) {
+    public void setLaunchDate(String launchDate) {
         this.launchDate = launchDate;
     }
 

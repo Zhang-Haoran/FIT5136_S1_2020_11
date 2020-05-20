@@ -1,13 +1,12 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MissionToMarsSystem {
 
-    ArrayList<Account> listOfAccount = new ArrayList<Account>();
+    ArrayList<Account> listOfAccount = new ArrayList<>();
     Account currentAccount = new Account();
     public static void main(String[] args) {
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
@@ -68,24 +67,7 @@ public class MissionToMarsSystem {
             }
         if (isUserValid){
             if  (currentAccount.getRole().equals("Mission Coordinator")){
-                userInterface.displayMissionCoordinatorScreen(currentAccount);
-                switch (userIntegerInput()){
-                    case 1:
-                        createMissionRequest();
-                        break;
-                    case 2:
-                        viewExistingMission();
-                        break;
-                    case 3:
-                        editMissionRequest();
-                        break;
-                    case 4:
-                        logout();
-                        break;
-                    default:
-                        System.out.println("Please enter the valid number");
-                        break;
-                }
+                missionCoordinatorMenuControl(currentAccount);
             }
             else if(currentAccount.getRole().equals("Administrator")){
                 userInterface.displayAdministratorScreen(currentAccount);
@@ -124,12 +106,21 @@ public class MissionToMarsSystem {
         }
 
     public void createMissionRequest() {
+        UserInterface userInterface = new UserInterface();
+        try {
+            userInterface.displayCreateMissionMenu();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        userInterface.displayMisssionConfirmation();
     }
     public void viewExistingMission() {
     }
     public void editMissionRequest() {
     }
     public void logout() {
+        System.out.println("Quitting the system");
+        System.exit(0);
     }
     public void selectShuttle() {
     }
@@ -162,5 +153,57 @@ public class MissionToMarsSystem {
 
     }
 
+    public void writeMissionRequestFile(MissionRequest missionRequest){
+        try {
+            FileWriter fileWriter = new FileWriter("MissionRequestData.txt", true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.newLine();
+            bufferedWriter.write(missionRequest.getName()+
+                    ","+missionRequest.getDescription()+
+                    ","+missionRequest.getCountry().getCountryOrigin()+
+                    ","+missionRequest.getCountry().getCountryAllowed()+
+                    ","+missionRequest.getMissionCoordinator().getName()+
+                    ","+missionRequest.getMissionCoordinator().getContactInfo()+
+                    ","+missionRequest.getJob().getName()+
+                    ","+missionRequest.getJob().getDescription()+
+                    ","+missionRequest.getListOfEmployment().get(0).getTitle()+
+                    ","+missionRequest.getListOfEmployment().get(0).getNumberRequired()+
+                    ","+missionRequest.getListOfCargo().get(0).getCargoFor()+
+                    ","+missionRequest.getListOfCargo().get(0).getCargoRequired()+
+                    ","+missionRequest.getListOfCargo().get(0).getQuantityRequired()+
+                    ","+missionRequest.getLaunchDate()+
+                    ","+missionRequest.getDestination()+
+                    ","+missionRequest.getDuration()+
+                    ","+missionRequest.getStatus()
+            );
+            bufferedWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-}
+    public void missionCoordinatorMenuControl(Account account){
+        UserInterface userInterface = new UserInterface();
+        userInterface.displayMissionCoordinatorScreen(account);
+        switch (userIntegerInput()){
+            case 1:
+                createMissionRequest();
+                missionCoordinatorMenuControl(account);
+                break;
+            case 2:
+                viewExistingMission();
+                missionCoordinatorMenuControl(account);
+                break;
+            case 3:
+                editMissionRequest();
+                missionCoordinatorMenuControl(account);
+                break;
+            case 4:
+                logout();
+                break;
+            default:
+                System.out.println("Please enter the valid number");
+                break;
+    }
+
+}}
