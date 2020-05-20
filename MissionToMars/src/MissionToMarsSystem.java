@@ -2,6 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MissionToMarsSystem {
@@ -34,7 +35,15 @@ public class MissionToMarsSystem {
     public int userIntegerInput(){
         int userInput = 0;
         Scanner scanner = new Scanner(System.in);
-        userInput = scanner.nextInt();
+        try
+        {
+            userInput = scanner.nextInt();
+        }
+        catch (InputMismatchException e)
+        {
+            System.out.println("Please input integer\n");
+        }
+
         return userInput;
     }
 
