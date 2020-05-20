@@ -2,6 +2,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class UserInterface {
     public void displayWelcomeMessage(){
@@ -110,12 +111,47 @@ public class UserInterface {
     }
     public void displayMissionSuccessMessage(){}
 
-    public void displayAllMissionNameList(MissionPlan missionPlan){
+    public void displayAllMissionNameList(Account account){
+        MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+        ArrayList<MissionRequest> listOfMissionRequest = missionToMarsSystem.readMissionRequestFile();
+        System.out.println("******* Mission Request List *******");
+        System.out.println("Which mission you want to choose?");
+
+        for (int i =0; i< listOfMissionRequest.size();i++){
+            System.out.println(i+1+". "+listOfMissionRequest.get(i).getName());
+        }
+        String userInput = missionToMarsSystem.userStringInput();
+        if (userInput.equals("b")){
+            missionToMarsSystem.missionCoordinatorMenuControl(account);
+        }
+        else {
+            displayMissionDetails(listOfMissionRequest.get(Integer.parseInt(userInput)));
+        }
+
 
     }
 
-    public void displayMissionDetails(MissionPlan missionPlan){
-
+    public void displayMissionDetails(MissionRequest missionRequest){
+        System.out.println("******* "+ missionRequest.getName()+" *******");
+        System.out.println("1.Mission name: "+ missionRequest.getName());
+        System.out.println("2.Mission description: "+ missionRequest.getDescription());
+        System.out.println("3.Country of origin: "+ missionRequest.getCountry().getCountryOrigin());
+        System.out.println("4.Country allowed: "+ missionRequest.getCountry().getCountryAllowed());
+        System.out.println("5.Coordinator name: "+ missionRequest.getMissionCoordinator().getName());
+        System.out.println("6.Coordinator contact information: "+ missionRequest.getMissionCoordinator().getContactInfo());
+        System.out.println("7.Job name: "+ missionRequest.getJob().getName());
+        System.out.println("8.Job Description: "+ missionRequest.getJob().getDescription());
+        System.out.println("9.Title of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());
+        System.out.println("10.Number of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());
+        System.out.println("11.Cargo for what kind of mission: "+ missionRequest.getListOfCargo().get(0).getCargoFor());
+        System.out.println("13.Cargo required for: "+ missionRequest.getListOfCargo().get(0).getCargoRequired());
+        System.out.println("14.Cargo quantity: "+ missionRequest.getListOfCargo().get(0).getQuantityRequired());
+        System.out.println("15.Location of destination: "+ missionRequest.getDestination());
+        System.out.println("16.Duration: "+ missionRequest.getDuration());
+        System.out.println("17.Status of mission: "+ missionRequest.getStatus());
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Press any key to continue . . . ");
+        scan.nextLine();
     }
 
     public void displayMissionModified(MissionPlan missionPlan){

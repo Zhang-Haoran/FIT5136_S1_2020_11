@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class MissionToMarsSystem {
 
     ArrayList<Account> listOfAccount = new ArrayList<>();
+    ArrayList<MissionRequest> listOfMissionRequest = new ArrayList<>();
     Account currentAccount = new Account();
     public static void main(String[] args) {
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
@@ -73,7 +74,7 @@ public class MissionToMarsSystem {
                 userInterface.displayAdministratorScreen(currentAccount);
                 switch (userIntegerInput()){
                     case 1:
-                        viewExistingMission();
+                        viewExistingMission(currentAccount);
                         break;
                     case 2:
                         editMissionRequest();
@@ -114,7 +115,10 @@ public class MissionToMarsSystem {
         }
         userInterface.displayMisssionConfirmation();
     }
-    public void viewExistingMission() {
+    public void viewExistingMission(Account account) {
+        UserInterface userInterface = new UserInterface();
+        userInterface.displayAllMissionNameList(account);
+
     }
     public void editMissionRequest() {
     }
@@ -151,6 +155,39 @@ public class MissionToMarsSystem {
             e.printStackTrace();
         }
 
+    }
+
+    public ArrayList<MissionRequest> readMissionRequestFile() {
+
+        ArrayList<MissionRequest> missionRequests = new ArrayList<>();
+        try {
+            FileReader inputFile = new FileReader("MissionRequestData.txt");
+            Scanner parser = new Scanner(inputFile);
+            while (parser.hasNextLine()) {
+                String[] userData = parser.nextLine().split(",");
+                Country country = new Country(userData[2],userData[3]);
+                MissionCoordinator missionCoordinator = new MissionCoordinator(userData[4],userData[5],listOfMissionRequest);
+                Job job = new Job(userData[6],userData[7]);
+                Employment employment = new Employment(userData[8], Integer.parseInt(userData[9]));
+                ArrayList<Employment> listOfEmployment = new ArrayList<>();
+                listOfEmployment.add(employment);
+                Cargo cargo = new Cargo(userData[10],userData[11],Integer.parseInt(userData[12]));
+                ArrayList<Cargo> listOfCargo = new ArrayList<>();
+                listOfCargo.add(cargo);
+
+                listOfMissionRequest.add(new MissionRequest
+                        (userData[0],userData[1],country, job, missionCoordinator,listOfEmployment,listOfCargo,
+                        userData[13],userData[14],userData[15],userData[16]));
+            }
+            inputFile.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        missionRequests = listOfMissionRequest;
+        return missionRequests;
     }
 
     public void writeMissionRequestFile(MissionRequest missionRequest){
@@ -191,7 +228,7 @@ public class MissionToMarsSystem {
                 missionCoordinatorMenuControl(account);
                 break;
             case 2:
-                viewExistingMission();
+                viewExistingMission(account);
                 missionCoordinatorMenuControl(account);
                 break;
             case 3:
@@ -205,5 +242,7 @@ public class MissionToMarsSystem {
                 System.out.println("Please enter the valid number");
                 break;
     }
+    }
 
-}}
+
+}
