@@ -37,9 +37,8 @@ public class UserInterface {
         System.out.println("--- Please enter the number below to select your option ");
         System.out.println("--- 1.Create new mission");
         System.out.println("--- 2.View existing missions");
-        System.out.println("--- 2.Edit mission");
-        System.out.println("--- 3.Select a shuttle");
-        System.out.println("--- 7.Log out");
+        System.out.println("--- 3.Edit mission");
+        System.out.println("--- 4.Log out");
         System.out.println("--- Enter your option: ");
     }
 
