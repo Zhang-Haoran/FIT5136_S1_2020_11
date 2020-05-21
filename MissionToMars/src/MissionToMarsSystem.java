@@ -112,9 +112,10 @@ public class MissionToMarsSystem {
         missionPlan= userInterface.displayMissionPlanNameList(account,"shuttle",missionPlan);
         return missionPlan;
     }
-    public void createSelectionCriteria(Account account,MissionPlan missionPlan){
+    public MissionPlan createSelectionCriteria(Account account,MissionPlan missionPlan){
         UserInterface userInterface = new UserInterface();
-        userInterface.displayMissionPlanNameList(account,"criteria",missionPlan);
+        missionPlan = userInterface.displayMissionPlanNameList(account,"criteria",missionPlan);
+        return missionPlan;
     }
     public void editSelectionCriteria() {
     }
@@ -298,7 +299,7 @@ public class MissionToMarsSystem {
                 administratorMenuControl(account);
                 break;
             case 4:
-                createSelectionCriteria(account,missionPlan);
+                missionPlan = createSelectionCriteria(account,missionPlan);
                 administratorMenuControl(account);
                 break;
             case 5:
