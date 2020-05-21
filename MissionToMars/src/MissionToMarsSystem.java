@@ -8,6 +8,8 @@ public class MissionToMarsSystem {
 
     ArrayList<Account> listOfAccount = new ArrayList<>();
     ArrayList<MissionRequest> listOfMissionRequest = new ArrayList<>();
+    ArrayList<Shuttle> listOfShuttle = new ArrayList<>();
+    ArrayList<MissionPlan> listOfMissionPlan = new ArrayList<>();
     Account currentAccount = new Account();
     public static void main(String[] args) {
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
@@ -104,10 +106,14 @@ public class MissionToMarsSystem {
         System.out.println("Quitting the system");
         System.exit(0);
     }
-    public void selectShuttle() {
-    }
-    public void createSelectionCriteria(){
+    public void selectShuttle(Account account) {
+        UserInterface userInterface = new UserInterface();
+        userInterface.displayAllMissionNameList(account,"shuttle");
 
+    }
+    public void createSelectionCriteria(Account account){
+        UserInterface userInterface = new UserInterface();
+        userInterface.displayAllMissionNameList(account,"criteria");
     }
     public void editSelectionCriteria() {
     }
@@ -133,6 +139,21 @@ public class MissionToMarsSystem {
             e.printStackTrace();
         }
 
+    }
+
+    public ArrayList<Shuttle> readShuttleFile(){
+        try{
+            FileReader inputFile = new FileReader("ShuttleData.txt");
+            Scanner parser = new Scanner(inputFile);
+            while (parser.hasNextLine()) {
+                String[] userData = parser.nextLine().split(",");
+                listOfShuttle.add(new Shuttle(userData[0],userData[1],Integer.parseInt(userData[2]),Integer.parseInt(userData[3]),Integer.parseInt(userData[4]),Integer.parseInt(userData[5])));
+
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return listOfShuttle;
     }
 
     public ArrayList<MissionRequest> readMissionRequestFile() {
@@ -197,6 +218,41 @@ public class MissionToMarsSystem {
         }
     }
 
+    public void writeMissionPlan(MissionPlan missionPlan,Shuttle shuttle){
+        try {
+            FileWriter fileWriter = new FileWriter("MissionPlanData.txt", true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.newLine();
+            bufferedWriter.write(missionPlan.getMissionRequest().getName()+
+                    ","+missionPlan.getMissionRequest().getDescription()+
+                    ","+missionPlan.getMissionRequest().getCountry().getCountryOrigin()+
+                    ","+missionPlan.getMissionRequest().getCountry().getCountryAllowed()+
+                    ","+missionPlan.getMissionRequest().getMissionCoordinator().getName()+
+                    ","+missionPlan.getMissionRequest().getMissionCoordinator().getContactInfo()+
+                    ","+missionPlan.getMissionRequest().getJob().getName()+
+                    ","+missionPlan.getMissionRequest().getJob().getDescription()+
+                    ","+missionPlan.getMissionRequest().getListOfEmployment().get(0).getTitle()+
+                    ","+missionPlan.getMissionRequest().getListOfEmployment().get(0).getNumberRequired()+
+                    ","+missionPlan.getMissionRequest().getListOfCargo().get(0).getCargoFor()+
+                    ","+missionPlan.getMissionRequest().getListOfCargo().get(0).getCargoRequired()+
+                    ","+missionPlan.getMissionRequest().getListOfCargo().get(0).getQuantityRequired()+
+                    ","+missionPlan.getMissionRequest().getLaunchDate()+
+                    ","+missionPlan.getMissionRequest().getDestination()+
+                    ","+missionPlan.getMissionRequest().getDuration()+
+                    ","+missionPlan.getMissionRequest().getStatus()+
+                    ","+shuttle.getName()+
+                    ","+shuttle.getManufacturingYear()+
+                    ","+shuttle.getFuelCapacity()+
+                    ","+shuttle.getPassengerCapacity()+
+                    ","+shuttle.getCargoCapacity()+
+                    ","+shuttle.getTravelSpeed()
+            );
+            bufferedWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     public void missionCoordinatorMenuControl(Account account){
@@ -237,16 +293,20 @@ public class MissionToMarsSystem {
                 administratorMenuControl(account);
                 break;
             case 3:
-                selectShuttle();
+                selectShuttle(account);
+                administratorMenuControl(account);
                 break;
             case 4:
-                createSelectionCriteria();
+                createSelectionCriteria(account);
+                administratorMenuControl(account);
                 break;
             case 5:
                 editSelectionCriteria();
+                administratorMenuControl(account);
                 break;
             case 6:
                 findBestCandidate();
+                administratorMenuControl(account);
                 break;
             case 7:
                 logout();

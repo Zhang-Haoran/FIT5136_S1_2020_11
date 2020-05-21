@@ -2,13 +2,15 @@ public class Shuttle {
     private String name;
     private String manufacturingYear;
     private int fuelCapacity;
+    private int passengerCapacity;
     private int cargoCapacity;
     private int travelSpeed;
 
-    public Shuttle(String name, String manufacturingYear, int fuelCapacity, int cargoCapacity, int travelSpeed) {
+    public Shuttle(String name, String manufacturingYear, int fuelCapacity, int passengerCapacity, int cargoCapacity, int travelSpeed) {
         this.name = name;
         this.manufacturingYear = manufacturingYear;
         this.fuelCapacity = fuelCapacity;
+        this.passengerCapacity = passengerCapacity;
         this.cargoCapacity = cargoCapacity;
         this.travelSpeed = travelSpeed;
     }
@@ -54,5 +56,13 @@ public class Shuttle {
 
     public void setTravelSpeed(int travelSpeed) {
         this.travelSpeed = travelSpeed;
+    }
+
+    public int getPassengerCapacity() {
+        return passengerCapacity;
+    }
+
+    public void setPassengerCapacity(int passengerCapacity) {
+        this.passengerCapacity = passengerCapacity;
     }
 }

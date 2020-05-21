@@ -121,6 +121,7 @@ public class UserInterface {
             System.out.println(i+1+". "+listOfMissionRequest.get(i).getName());
         }
         System.out.println("Press b to go back to previous screen");
+        System.out.println("Press enter you option");
 
         String userInput = missionToMarsSystem.userStringInput();
         if (userInput.equals("b")){
@@ -135,6 +136,12 @@ public class UserInterface {
         }
         else if (action.equals("edit")){
             displayMissionModified(listOfMissionRequest.get(Integer.parseInt(userInput)),account);
+        }
+        else if (action.equals("shuttle")){
+            displaySelectShuttleMenu(listOfMissionRequest.get(Integer.parseInt(userInput)),account);
+        }
+        else if (account.equals("criteria")){
+            displayCreateCriteriaMenu(listOfMissionRequest.get(Integer.parseInt(userInput)),account);
         }
 
 
@@ -308,15 +315,52 @@ public class UserInterface {
 
     }
 
-    public void displayCreateShuttleMenu(Shuttle shuttle){
+    public void displaySelectShuttleMenu(MissionRequest missionRequest,Account account){
+        System.out.println("******* Select a shuttle for "+missionRequest.getName()+" *******");
+        System.out.println("The number of space shuttles: ");
+        MissionPlan missionPlan = new MissionPlan(missionRequest);
+        MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+        ArrayList<Shuttle> listOfShuttle =  missionToMarsSystem.readShuttleFile();
+        for (int i = 0; i< listOfShuttle.size();i++){
+            System.out.println(i+1+". "+listOfShuttle.get(i).getName());;
+        }
+        System.out.println("Press b to go back to previous screen");
+        System.out.println("Press enter you option");
 
+        String userInput = missionToMarsSystem.userStringInput();
+        if (userInput.equals("b")){
+            displayAllMissionNameList(account,"Shuttle");
+        }
+        displayShuttleConfirmation(listOfShuttle.get(Integer.parseInt(userInput)),account,missionPlan);
     }
 
-    public void displayShuttleConfirmation(){
-
+    public void displayShuttleConfirmation(Shuttle shuttle,Account account,MissionPlan missionPlan){
+        MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+        System.out.println("******* The information of space shuttle "+shuttle.getName()+ " *******");
+        System.out.println("1.Shuttle name: "+ shuttle.getName());
+        System.out.println("2.Manufacturing year "+ shuttle.getManufacturingYear());
+        System.out.println("3.Fuel capacity: "+ shuttle.getFuelCapacity());
+        System.out.println("3.Passenger capacity: "+ shuttle.getPassengerCapacity());
+        System.out.println("4.Cargo capacity: "+ shuttle.getCargoCapacity());
+        System.out.println("5.Travel speed: "+ shuttle.getTravelSpeed());
+        System.out.println("Press b to go back to previous screen");
+        System.out.println("Press y to go back to confirm selection");
+        String userInput = missionToMarsSystem.userStringInput();
+        if (userInput.equals("b")){
+            displaySelectShuttleMenu(missionPlan.getMissionRequest(),account);
+        }
+        else if (userInput.equals("y"));
+        {
+            //To fix: if the user reselect the same shuttle again the file may be create again
+            missionPlan.setShuttle(shuttle);
+            missionToMarsSystem.writeMissionPlan(missionPlan,shuttle);
+            System.out.println("Shuttle select successfully");
+        }
     }
 
-    public void displayCreateCriteriaMenu(Criteria criteria){}
+    public void displayCreateCriteriaMenu(MissionRequest missionRequest,Account account){
+        
+    }
     public void displayCriteriaConfirmation(){}
     public void displayCriteriaDetails(Criteria criteria){}
     public void displayCriteriaModified(){}
