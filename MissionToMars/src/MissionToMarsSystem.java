@@ -11,6 +11,7 @@ public class MissionToMarsSystem {
     ArrayList<Shuttle> listOfShuttle = new ArrayList<>();
     ArrayList<MissionPlan> listOfMissionPlan = new ArrayList<>();
     Account currentAccount = new Account();
+    MissionPlan missionPlan = new MissionPlan();
     public static void main(String[] args) {
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         UserInterface userInterface = new UserInterface();
@@ -106,14 +107,14 @@ public class MissionToMarsSystem {
         System.out.println("Quitting the system");
         System.exit(0);
     }
-    public void selectShuttle(Account account) {
+    public MissionPlan selectShuttle(Account account,MissionPlan missionPlan) {
         UserInterface userInterface = new UserInterface();
-        userInterface.displayMissionPlanNameList(account,"shuttle");
-
+        missionPlan= userInterface.displayMissionPlanNameList(account,"shuttle",missionPlan);
+        return missionPlan;
     }
-    public void createSelectionCriteria(Account account){
+    public void createSelectionCriteria(Account account,MissionPlan missionPlan){
         UserInterface userInterface = new UserInterface();
-        userInterface.displayMissionPlanNameList(account,"criteria");
+        userInterface.displayMissionPlanNameList(account,"criteria",missionPlan);
     }
     public void editSelectionCriteria() {
     }
@@ -293,11 +294,11 @@ public class MissionToMarsSystem {
                 administratorMenuControl(account);
                 break;
             case 3:
-                selectShuttle(account);
+                missionPlan = selectShuttle(account,missionPlan);
                 administratorMenuControl(account);
                 break;
             case 4:
-                createSelectionCriteria(account);
+                createSelectionCriteria(account,missionPlan);
                 administratorMenuControl(account);
                 break;
             case 5:

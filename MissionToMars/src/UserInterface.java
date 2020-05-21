@@ -132,16 +132,16 @@ public class UserInterface {
             }
         }
         if(action.equals("view")) {
-            displayMissionDetails(listOfMissionRequest.get(Integer.parseInt(userInput)));
+            displayMissionDetails(listOfMissionRequest.get(Integer.parseInt(userInput)-1));
         }
         else if (action.equals("edit")){
-            displayMissionModified(listOfMissionRequest.get(Integer.parseInt(userInput)),account);
+            displayMissionModified(listOfMissionRequest.get(Integer.parseInt(userInput)-1),account);
         }
 
 
 
     }
-    public void displayMissionPlanNameList(Account account,String action){
+    public MissionPlan displayMissionPlanNameList(Account account,String action,MissionPlan missionPlan){
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         ArrayList<MissionRequest> listOfMissionRequest = missionToMarsSystem.readMissionRequestFile();
         System.out.println("******* Mission Request List *******");
@@ -162,13 +162,13 @@ public class UserInterface {
             }
         }
        if (action.equals("shuttle")){
-            displaySelectShuttleMenu(listOfMissionRequest.get(Integer.parseInt(userInput)),account);
+            missionPlan = displaySelectShuttleMenu(listOfMissionRequest.get(Integer.parseInt(userInput)-1),account,missionPlan);
         }
         else if (action.equals("criteria")){
-            displayCreateCriteriaMenu(listOfMissionRequest.get(Integer.parseInt(userInput)),account);
+            displayCreateCriteriaMenu(listOfMissionRequest.get(Integer.parseInt(userInput)-1),account,missionPlan);
         }
 
-
+        return missionPlan;
     }
 
     public void displayMissionDetails(MissionRequest missionRequest){
@@ -341,10 +341,10 @@ public class UserInterface {
 
     }
 
-    public void displaySelectShuttleMenu(MissionRequest missionRequest,Account account){
+    public MissionPlan displaySelectShuttleMenu(MissionRequest missionRequest,Account account,MissionPlan missionPlan){
         System.out.println("******* Select a shuttle for "+missionRequest.getName()+" *******");
         System.out.println("The number of space shuttles: ");
-        MissionPlan missionPlan = new MissionPlan(missionRequest);
+        missionPlan.setMissionRequest(missionRequest);
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         ArrayList<Shuttle> listOfShuttle =  missionToMarsSystem.readShuttleFile();
         for (int i = 0; i< listOfShuttle.size();i++){
@@ -355,12 +355,13 @@ public class UserInterface {
 
         String userInput = missionToMarsSystem.userStringInput();
         if (userInput.equals("b")){
-            displayMissionPlanNameList(account,"Shuttle");
+            displayMissionPlanNameList(account,"Shuttle",missionPlan);
         }
-        displayShuttleConfirmation(listOfShuttle.get(Integer.parseInt(userInput)-1),account,missionPlan);
+        missionPlan = displayShuttleConfirmation(listOfShuttle.get(Integer.parseInt(userInput)-1),account,missionPlan);
+        return missionPlan;
     }
 
-    public void displayShuttleConfirmation(Shuttle shuttle,Account account,MissionPlan missionPlan){
+    public MissionPlan displayShuttleConfirmation(Shuttle shuttle,Account account,MissionPlan missionPlan){
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         System.out.println("******* The information of space shuttle "+shuttle.getName()+ " *******");
         System.out.println("1.Shuttle name: "+ shuttle.getName());
@@ -373,18 +374,18 @@ public class UserInterface {
         System.out.println("Press y to go back to confirm selection");
         String userInput = missionToMarsSystem.userStringInput();
         if (userInput.equals("b")){
-            displaySelectShuttleMenu(missionPlan.getMissionRequest(),account);
+            displaySelectShuttleMenu(missionPlan.getMissionRequest(),account,missionPlan);
         }
         else if (userInput.equals("y"));
         {
             //To fix: if the user reselect the same shuttle again the file may be create again
             missionPlan.setShuttle(shuttle);
-            missionToMarsSystem.writeMissionPlan(missionPlan,shuttle);
             System.out.println("Shuttle select successfully");
         }
+        return missionPlan;
     }
 
-    public void displayCreateCriteriaMenu(MissionRequest missionRequest,Account account){
+    public void displayCreateCriteriaMenu(MissionRequest missionRequest,Account account,MissionPlan missionPlan){
         
     }
     public void displayCriteriaConfirmation(){}
