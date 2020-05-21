@@ -108,12 +108,12 @@ public class MissionToMarsSystem {
     }
     public void selectShuttle(Account account) {
         UserInterface userInterface = new UserInterface();
-        userInterface.displayAllMissionNameList(account,"shuttle");
+        userInterface.displayMissionPlanNameList(account,"shuttle");
 
     }
     public void createSelectionCriteria(Account account){
         UserInterface userInterface = new UserInterface();
-        userInterface.displayAllMissionNameList(account,"criteria");
+        userInterface.displayMissionPlanNameList(account,"criteria");
     }
     public void editSelectionCriteria() {
     }

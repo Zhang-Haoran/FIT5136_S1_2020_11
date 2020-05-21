@@ -137,10 +137,34 @@ public class UserInterface {
         else if (action.equals("edit")){
             displayMissionModified(listOfMissionRequest.get(Integer.parseInt(userInput)),account);
         }
-        else if (action.equals("shuttle")){
+
+
+
+    }
+    public void displayMissionPlanNameList(Account account,String action){
+        MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+        ArrayList<MissionRequest> listOfMissionRequest = missionToMarsSystem.readMissionRequestFile();
+        System.out.println("******* Mission Request List *******");
+        System.out.println("Which mission you want to choose?");
+
+        for (int i =0; i< listOfMissionRequest.size();i++){
+            System.out.println(i+1+". "+listOfMissionRequest.get(i).getName());
+        }
+        System.out.println("Press b to go back to previous screen");
+        System.out.println("Press enter you option");
+
+        String userInput = missionToMarsSystem.userStringInput();
+        if (userInput.equals("b")){
+            if (account.getRole().equals("Mission Coordinator"))
+                missionToMarsSystem.missionCoordinatorMenuControl(account);
+            else {
+                missionToMarsSystem.administratorMenuControl(account);
+            }
+        }
+       if (action.equals("shuttle")){
             displaySelectShuttleMenu(listOfMissionRequest.get(Integer.parseInt(userInput)),account);
         }
-        else if (account.equals("criteria")){
+        else if (action.equals("criteria")){
             displayCreateCriteriaMenu(listOfMissionRequest.get(Integer.parseInt(userInput)),account);
         }
 
@@ -331,9 +355,9 @@ public class UserInterface {
 
         String userInput = missionToMarsSystem.userStringInput();
         if (userInput.equals("b")){
-            displayAllMissionNameList(account,"Shuttle");
+            displayMissionPlanNameList(account,"Shuttle");
         }
-        displayShuttleConfirmation(listOfShuttle.get(Integer.parseInt(userInput)),account,missionPlan);
+        displayShuttleConfirmation(listOfShuttle.get(Integer.parseInt(userInput)-1),account,missionPlan);
     }
 
     public void displayShuttleConfirmation(Shuttle shuttle,Account account,MissionPlan missionPlan){
