@@ -131,7 +131,8 @@ public class MissionToMarsSystem {
         ArrayList<Candidate> selectedCandidate = new ArrayList<>();
         listOfCandidate = readCandidateFile();
         for (int i = 0; i<listOfCandidate.size();i++){
-            if (Integer.parseInt(listOfCandidate.get(i).getDateOfBirth())<= missionPlan.getCriteria().getMaxAge()
+            if (Integer.parseInt(listOfCandidate.get(i).getDateOfBirth())
+                    <= missionPlan.getCriteria().getMaxAge()
                     && Integer.parseInt(listOfCandidate.get(i).getDateOfBirth()) >= missionPlan.getCriteria().getMinAge()
                     //third party record
             ){
@@ -139,6 +140,12 @@ public class MissionToMarsSystem {
                 count++;
                 if (count == numberOfCandidate) break;
             }
+
+        }
+
+        System.out.println("Search result:");
+        for(int i = 0; i<selectedCandidate.size();i++){
+            System.out.println("Name "+ selectedCandidate.get(i).getName());
         }
     }
 
