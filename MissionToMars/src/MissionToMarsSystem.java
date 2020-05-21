@@ -20,6 +20,7 @@ public class MissionToMarsSystem {
         switch (missionToMarsSystem.userIntegerInput()){
             case 1:
                 System.out.println("Sign up candidate is not the requirement. Please login");
+                missionToMarsSystem.login();
                 break;
             case 2:
                 missionToMarsSystem.login();
@@ -125,7 +126,7 @@ public class MissionToMarsSystem {
     }
 
     public void findBestCandidate(MissionPlan missionPlan){
-        System.out.println("Howw many candidates do you want to find");
+        System.out.println("How many candidates do you want to find");
         int numberOfCandidate = userIntegerInput();
         int count =0;
         ArrayList<Candidate> selectedCandidate = new ArrayList<>();

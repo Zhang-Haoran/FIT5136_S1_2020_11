@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="edit criteria added. find N best candidate partily added. missing get health record from third party">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MissionToMars/src/MissionToMarsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/MissionToMars/src/MissionToMarsSystem.java" afterDir="false" />
-    </list>
+    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="find N best candidate updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +102,7 @@
       <workItem from="1589887827367" duration="42705000" />
       <workItem from="1590017772297" duration="6605000" />
       <workItem from="1590036240487" duration="316000" />
-      <workItem from="1590036566934" duration="9504000" />
+      <workItem from="1590036566934" duration="9700000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1586344986398</created>
@@ -254,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590047531512</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="find N best candidate updated">
+      <created>1590048301401</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1590048301401</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +294,8 @@
     <MESSAGE value="select shuttle updated" />
     <MESSAGE value="create criteria added" />
     <MESSAGE value="edit criteria added. find N best candidate partily added. missing get health record from third party" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit criteria added. find N best candidate partily added. missing get health record from third party" />
+    <MESSAGE value="find N best candidate updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="find N best candidate updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="510" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589895964177">
@@ -321,38 +326,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="262" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589977692849" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1590048090036">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1590048306136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590048090036" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1590048090035">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590048306136" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1590048306136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590048090035" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1590048090035">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590048306136" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1590048306136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590048090035" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1590048090036">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590048306136" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1590048306136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590048090036" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590048090036">
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590048306136" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590048306137">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590048090036" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1590048090036">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590048306137" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1590048306136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590048090036" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1590048090036">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590048306136" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1590048306136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590048090036" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1590048090036">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590048306136" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1590048306136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590048090036" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590048306136" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590047543200">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
