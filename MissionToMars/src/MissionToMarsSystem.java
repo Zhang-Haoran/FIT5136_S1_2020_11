@@ -38,14 +38,19 @@ public class MissionToMarsSystem {
 
     public int userIntegerInput(){
         int userInput = 0;
-        Scanner scanner = new Scanner(System.in);
-        try
+        boolean flag = true;
+        while (flag)
         {
-            userInput = scanner.nextInt();
-        }
-        catch (InputMismatchException e)
-        {
-            System.out.println("Please input integer\n");
+            try
+            {
+                Scanner scanner = new Scanner(System.in);
+                userInput = scanner.nextInt();
+                flag= false;
+            }
+            catch (InputMismatchException e)
+            {
+                System.out.println("Please input integer");
+            }
         }
 
         return userInput;
