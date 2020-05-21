@@ -303,7 +303,9 @@ public class UserInterface {
                 displayAllMissionNameList(account,"edit");
                 break;
             case "h":
-                missionToMarsSystem.missionCoordinatorMenuControl(account);
+                if(account.getRole().equals("Mission Coordinator")){
+                missionToMarsSystem.missionCoordinatorMenuControl(account);}
+                else {missionToMarsSystem.administratorMenuControl(account);}
                 break;
             default:
                 System.out.println("--- Please enter an option");
