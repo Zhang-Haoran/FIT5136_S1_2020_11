@@ -18,6 +18,13 @@ public class Candidate extends Account {
     public Candidate() {
     }
 
+    public Candidate(String name, String dateOfBirth, String address, String nationality) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.address = address;
+        this.nationality = nationality;
+    }
+
     public String getName() {
         return name;
     }

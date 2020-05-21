@@ -10,6 +10,7 @@ public class MissionToMarsSystem {
     ArrayList<MissionRequest> listOfMissionRequest = new ArrayList<>();
     ArrayList<Shuttle> listOfShuttle = new ArrayList<>();
     ArrayList<MissionPlan> listOfMissionPlan = new ArrayList<>();
+    ArrayList<Candidate> listOfCandidate = new ArrayList<>();
     Account currentAccount = new Account();
     MissionPlan missionPlan = new MissionPlan();
     public static void main(String[] args) {
@@ -117,11 +118,28 @@ public class MissionToMarsSystem {
         missionPlan = userInterface.displayMissionPlanNameList(account,"criteria",missionPlan);
         return missionPlan;
     }
-    public void editSelectionCriteria() {
+    public MissionPlan editSelectionCriteria(Account account,MissionPlan missionPlan) {
+        UserInterface userInterface = new UserInterface();
+        missionPlan = userInterface.displayMissionPlanNameList(account,"editCriteria",missionPlan);
+        return missionPlan;
     }
 
-    public void findBestCandidate(){
-
+    public void findBestCandidate(MissionPlan missionPlan){
+        System.out.println("Howw many candidates do you want to find");
+        int numberOfCandidate = userIntegerInput();
+        int count =0;
+        ArrayList<Candidate> selectedCandidate = new ArrayList<>();
+        listOfCandidate = readCandidateFile();
+        for (int i = 0; i<listOfCandidate.size();i++){
+            if (Integer.parseInt(listOfCandidate.get(i).getDateOfBirth())<= missionPlan.getCriteria().getMaxAge()
+                    && Integer.parseInt(listOfCandidate.get(i).getDateOfBirth()) >= missionPlan.getCriteria().getMinAge()
+                    //third party record
+            ){
+                selectedCandidate.add(listOfCandidate.get(i));
+                count++;
+                if (count == numberOfCandidate) break;
+            }
+        }
     }
 
     public void readAccountFile() {
@@ -140,6 +158,25 @@ public class MissionToMarsSystem {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+    public ArrayList<Candidate> readCandidateFile() {
+
+        try {
+            FileReader inputFile = new FileReader("CandidateData.txt");
+            Scanner parser = new Scanner(inputFile);
+            while (parser.hasNextLine()) {
+                String[] userData = parser.nextLine().split(",");
+                listOfCandidate.add(new Candidate(userData[0],userData[1],userData[2],userData[3]));
+
+            }
+            inputFile.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return listOfCandidate;
 
     }
 
@@ -288,27 +325,21 @@ public class MissionToMarsSystem {
         switch (userIntegerInput()){
             case 1:
                 viewExistingMission(account);
-                administratorMenuControl(account);
                 break;
             case 2:
                 editMissionRequest(account);
-                administratorMenuControl(account);
                 break;
             case 3:
                 missionPlan = selectShuttle(account,missionPlan);
-                administratorMenuControl(account);
                 break;
             case 4:
                 missionPlan = createSelectionCriteria(account,missionPlan);
-                administratorMenuControl(account);
                 break;
             case 5:
-                editSelectionCriteria();
-                administratorMenuControl(account);
+                missionPlan = editSelectionCriteria(account,missionPlan);
                 break;
             case 6:
-                findBestCandidate();
-                administratorMenuControl(account);
+                findBestCandidate(missionPlan);
                 break;
             case 7:
                 logout();
@@ -317,6 +348,7 @@ public class MissionToMarsSystem {
                 System.out.println("Please enter the valid number");
                 break;
     }
+        administratorMenuControl(account);
 
 }
 
