@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="bug fixed">
+    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="select shuttle updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MissionPlanData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MissionPlanData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MissionToMars/src/MissionToMarsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/MissionToMars/src/MissionToMarsSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MissionToMars/src/Criteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/MissionToMars/src/Criteria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MissionToMars/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/MissionToMars/src/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +106,7 @@
       <workItem from="1589887827367" duration="42705000" />
       <workItem from="1590017772297" duration="6605000" />
       <workItem from="1590036240487" duration="316000" />
-      <workItem from="1590036566934" duration="2165000" />
+      <workItem from="1590036566934" duration="4195000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1586344986398</created>
@@ -228,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590038102158</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="select shuttle updated">
+      <created>1590039167432</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1590039167432</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +267,8 @@
     <MESSAGE value="view existing mission added" />
     <MESSAGE value="editing mission added" />
     <MESSAGE value="bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
+    <MESSAGE value="select shuttle updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="select shuttle updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="510" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589895964177">
@@ -288,42 +295,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="262" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589977692849" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1590038701105">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1590039137157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590038701105" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1590038701105">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590039137157" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1590039137157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590038701105" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1590038701105">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590039137157" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1590039137157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590038701105" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1590038701105">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590039137157" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1590039137157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590038701105" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590038701105">
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590039137157" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590039137157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590038701105" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1590038701105">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590039137157" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1590039137157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590038701105" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1590038701105">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590039137157" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1590039137157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590038701105" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1590038701105">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590039137157" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1590039137157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590038701105" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590036617747">
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590039137157" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590039171900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590036617747" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590039171900" />
     <state x="499" y="170" key="extract.method.dialog" timestamp="1589969826009">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -340,16 +347,5 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="209" y="11" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1589888715589" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/MissionToMars/src/MissionToMarsSystem.java</url>
-          <line>296</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

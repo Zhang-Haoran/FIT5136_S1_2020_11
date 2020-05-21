@@ -6,8 +6,8 @@ public class Criteria {
     private ArrayList<String> qualification;
     private int workExperience;
     private ArrayList<String> occupation;
-    private ArrayList<String> healthRecord;
-    private ArrayList<String> criminalRecord;
+    private String healthRecord;
+    private String criminalRecord;
     private String computerSkill;
     private ArrayList<String> languageSpoken;
 
@@ -54,19 +54,19 @@ public class Criteria {
         this.occupation = occupation;
     }
 
-    public ArrayList<String> getHealthRecord() {
+    public String getHealthRecord() {
         return healthRecord;
     }
 
-    public void setHealthRecord(ArrayList<String> healthRecord) {
+    public void setHealthRecord(String healthRecord) {
         this.healthRecord = healthRecord;
     }
 
-    public ArrayList<String> getCriminalRecord() {
+    public String getCriminalRecord() {
         return criminalRecord;
     }
 
-    public void setCriminalRecord(ArrayList<String> criminalRecord) {
+    public void setCriminalRecord(String criminalRecord) {
         this.criminalRecord = criminalRecord;
     }
 
@@ -86,7 +86,7 @@ public class Criteria {
         this.languageSpoken = languageSpoken;
     }
 
-    public Criteria(int maxAge, int minAge, ArrayList<String> qualification, int workExperience, ArrayList<String> occupation, ArrayList<String> healthRecord, ArrayList<String> criminalRecord, String computerSkill, ArrayList<String> languageSpoken) {
+    public Criteria(int maxAge, int minAge, ArrayList<String> qualification, int workExperience, ArrayList<String> occupation, String healthRecord, String criminalRecord, String computerSkill, ArrayList<String> languageSpoken) {
         this.maxAge = maxAge;
         this.minAge = minAge;
         this.qualification = qualification;

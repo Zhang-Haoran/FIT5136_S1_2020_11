@@ -165,7 +165,7 @@ public class UserInterface {
             missionPlan = displaySelectShuttleMenu(listOfMissionRequest.get(Integer.parseInt(userInput)-1),account,missionPlan);
         }
         else if (action.equals("criteria")){
-            displayCreateCriteriaMenu(listOfMissionRequest.get(Integer.parseInt(userInput)-1),account,missionPlan);
+            missionPlan = displayCreateCriteriaMenu(listOfMissionRequest.get(Integer.parseInt(userInput)-1),account,missionPlan);
         }
 
         return missionPlan;
@@ -385,10 +385,40 @@ public class UserInterface {
         return missionPlan;
     }
 
-    public void displayCreateCriteriaMenu(MissionRequest missionRequest,Account account,MissionPlan missionPlan){
-        
+    public MissionPlan displayCreateCriteriaMenu(MissionRequest missionRequest,Account account,MissionPlan missionPlan){
+        System.out.println("******* Create specific criteria *******");
+        System.out.println("select a job title ");
+//        missionPlan.setMissionRequest(missionRequest);
+        MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+        for (int i =0; i< missionRequest.getListOfEmployment().size();i++){
+            System.out.println(i+1+". "+missionRequest.getListOfEmployment().get(i).getTitle());
+        }
+        System.out.println("Press b to go back to previous screen");
+        System.out.println("Press enter you option");
+
+        String userInput = missionToMarsSystem.userStringInput();
+        if (userInput.equals("b")){
+            displayMissionPlanNameList(account,"criteria",missionPlan);
+        }
+        missionPlan = displayCriteriaConfirmation(missionRequest.getListOfEmployment().get(Integer.parseInt(userInput)-1),missionPlan);
+        return missionPlan;
     }
-    public void displayCriteriaConfirmation(){}
+    public MissionPlan displayCriteriaConfirmation(Employment employment,MissionPlan missionPlan){
+        Criteria criteria = new Criteria();
+        MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+        System.out.println("******* Create specific policy for"+ employment.getTitle() +" *******");
+        System.out.println("--- Number of employees required: "+ employment.getNumberRequired());
+        System.out.println("--- 1. Please enter maximum of age for this job (Press enter to save)");
+        criteria.setMaxAge(missionToMarsSystem.userIntegerInput());
+        System.out.println("--- 2. Please enter minimum of age for this job (Press enter to save)");
+        criteria.setMinAge(missionToMarsSystem.userIntegerInput());
+        System.out.println("--- 3. Please enter requirement of health record(Press enter to save)");
+        criteria.setHealthRecord(missionToMarsSystem.userStringInput());
+        System.out.println("--- 4. Please enter requirement of criminal record(Press enter to save)");
+        criteria.setCriminalRecord(missionToMarsSystem.userStringInput());
+        missionPlan.setCriteria(criteria);
+        return missionPlan;
+    }
     public void displayCriteriaDetails(Criteria criteria){}
     public void displayCriteriaModified(){}
 
