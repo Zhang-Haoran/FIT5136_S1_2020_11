@@ -32,8 +32,18 @@ public class MissionToMarsSystem {
 
     public String userStringInput(){
         String userInput = "";
-        Scanner scanner = new Scanner(System.in);
-        userInput = scanner.nextLine();
+        boolean flag = true;
+        while (flag){
+            try{
+                Scanner scanner = new Scanner(System.in);
+                userInput = scanner.nextLine();
+                flag = false;
+            }
+            catch (InputMismatchException e){
+                System.out.println("Please input string");
+            }
+        }
+
         return userInput;
     }
 

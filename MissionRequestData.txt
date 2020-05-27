@@ -3,3 +3,4 @@ Mission 2,establish a colony,Australia,Australia,Haoran,012345567,establish colo
 Mission 3,establish a colony,Australia,Australia,Haoran,012345567,establish colony,establish colony,civil engineers,5,jounery,desserts,15,11/11/2020,Mars colony,31,planning phase
 Mission 4,build school,China,China,yiwei,wechat,build road,build a big road,civil,1,discover,water,4,20/2/20,China,1,planning
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+mission44,s,s,s,s,s,s,s,s,2,1,1,1,1,1,1,1
