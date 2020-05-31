@@ -56,4 +56,13 @@ public class MissionPlan {
     public void setShuttle(Shuttle shuttle) {
         this.shuttle = shuttle;
     }
+
+    public String getRecordAfterShuttle(){
+        return "Mission details: "+this.getMissionRequest().getRecord()+ "\nShuttle Details: "+getShuttle().getRecord();
+
+    }
+    public String getRecordAfterCriteria(){
+        return "Mission details: "+this.getMissionRequest().getRecord()+ "\nShuttle Details: "+getShuttle().getRecord()+ "\nCriteria Details: "+getCriteria().getRecord();
+
+    }
 }

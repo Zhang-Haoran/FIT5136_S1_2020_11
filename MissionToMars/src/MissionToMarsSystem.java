@@ -171,11 +171,13 @@ public class MissionToMarsSystem {
         int count =0;
         ArrayList<Candidate> selectedCandidate = new ArrayList<>();
         listOfCandidate = readCandidateFile();
+        System.out.println("Collecting candidate's criminal and health record from third party......downloading");
         for (int i = 0; i<listOfCandidate.size();i++){
-            if (Integer.parseInt(listOfCandidate.get(i).getDateOfBirth())
+            if (Integer.parseInt(listOfCandidate.get(i).getAge())
                     <= missionPlan.getCriteria().getMaxAge()
-                    && Integer.parseInt(listOfCandidate.get(i).getDateOfBirth()) >= missionPlan.getCriteria().getMinAge()
-                    //third party record
+                    && Integer.parseInt(listOfCandidate.get(i).getAge()) >= missionPlan.getCriteria().getMinAge()
+                    && listOfCandidate.get(i).getHealthRecord().equals(missionPlan.getCriteria().getHealthRecord())
+                    && listOfCandidate.get(i).getCriminalRecord().equals(missionPlan.getCriteria().getCriminalRecord())
             ){
                 selectedCandidate.add(listOfCandidate.get(i));
                 count++;
@@ -186,8 +188,9 @@ public class MissionToMarsSystem {
 
         System.out.println("Search result:");
         for(int i = 0; i<selectedCandidate.size();i++){
-            System.out.println("Name "+ selectedCandidate.get(i).getName());
+            System.out.println("Candidate Name: "+ selectedCandidate.get(i).getName());
         }
+
     }
 
     //fetch the account data from the database
@@ -392,15 +395,34 @@ public class MissionToMarsSystem {
                 break;
             case 3:
                 missionPlan = selectShuttle(account,missionPlan);
+                System.out.println("Mission Plan: \n" + missionPlan.getRecordAfterShuttle());
                 break;
             case 4:
-                missionPlan = createSelectionCriteria(account,missionPlan);
+                if (missionPlan.getShuttle() == null){
+                    System.out.println("Please select shuttle for a mission first");
+                }else {
+                    missionPlan = createSelectionCriteria(account,missionPlan);
+                    System.out.println("Mission Plan: \n" + missionPlan.getRecordAfterCriteria());
+                }
+
                 break;
             case 5:
-                missionPlan = editSelectionCriteria(account,missionPlan);
+                if (missionPlan.getCriteria() == null){
+                    System.out.println("Please create criteria for a mission first");
+                }
+                else {
+                    missionPlan = editSelectionCriteria(account,missionPlan);
+                    System.out.println("Mission Plan: \n" + missionPlan.getRecordAfterCriteria());
+                }
+
                 break;
             case 6:
-                findBestCandidate(missionPlan);
+                if (missionPlan.getShuttle() == null || missionPlan.getCriteria() == null){
+                    System.out.println("Please select shuttle and create criteria for a mission first");
+                }
+                else {
+                    findBestCandidate(missionPlan);
+                }
                 break;
             case 7:
                 logout();

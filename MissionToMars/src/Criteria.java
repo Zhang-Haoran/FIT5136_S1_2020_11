@@ -97,4 +97,8 @@ public class Criteria {
         this.computerSkill = computerSkill;
         this.languageSpoken = languageSpoken;
     }
+    public String getRecord(){
+        return this.getMaxAge()+ ","+this.getMinAge()+","+this.getHealthRecord()+","+this.getCriminalRecord();
+
+    }
 }

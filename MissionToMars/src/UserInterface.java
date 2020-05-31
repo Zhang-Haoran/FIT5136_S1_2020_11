@@ -516,18 +516,38 @@ public class UserInterface {
         switch (userInput){
             case "1":
                 System.out.println("--- 1. Please enter maximum of age for this job (Press enter to save)");
+                userInput = missionToMarsSystem.userStringInput();
+                if (missionPlan.getCriteria() == null){
+                    System.out.println("Please create criteria for a mission first");
+                    missionToMarsSystem.administratorMenuControl(account);
+                }
                 missionPlan.getCriteria().setMaxAge(Integer.parseInt(userInput));
                 break;
             case "2":
                 System.out.println("--- 2. Please enter minimum of age for this job (Press enter to save)");
+                userInput = missionToMarsSystem.userStringInput();
+                if (missionPlan.getCriteria()  == null){
+                    System.out.println("Please create criteria for a mission first");
+                    missionToMarsSystem.administratorMenuControl(account);
+                }
                 missionPlan.getCriteria().setMinAge(Integer.parseInt(userInput));
                 break;
             case "3":
                 System.out.println("--- 3. Please enter requirement of health record(Press enter to save)");
+                userInput = missionToMarsSystem.userStringInput();
+                if (missionPlan.getCriteria()  == null){
+                    System.out.println("Please create criteria for a mission first");
+                    missionToMarsSystem.administratorMenuControl(account);
+                }
                 missionPlan.getCriteria().setHealthRecord(userInput);
                 break;
             case "4":
                 System.out.println("--- 4. Please enter requirement of criminal record(Press enter to save)");
+                userInput = missionToMarsSystem.userStringInput();
+                if (missionPlan.getCriteria()  == null){
+                    System.out.println("Please create criteria for a mission first");
+                    missionToMarsSystem.administratorMenuControl(account);
+                }
                 missionPlan.getCriteria().setCriminalRecord(userInput);
                 break;
             default:

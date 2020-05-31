@@ -65,4 +65,9 @@ public class Shuttle {
     public void setPassengerCapacity(int passengerCapacity) {
         this.passengerCapacity = passengerCapacity;
     }
+
+    public String getRecord(){
+        return this.getName()+ ","+this.getManufacturingYear()+","+ this.getFuelCapacity()+ ","+ this.getCargoCapacity()+","+this.getTravelSpeed()+","+this.getPassengerCapacity();
+
+    }
 }

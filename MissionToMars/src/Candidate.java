@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Candidate extends Account {
     private String name;
-    private String dateOfBirth;
-    private String address;
-    private String nationality;
+    private String age;
+    private String healthRecord;
+    private String criminalRecord;
     private String id;
     private String gender;
     private ArrayList<String> allergy;
@@ -18,11 +18,11 @@ public class Candidate extends Account {
     public Candidate() {
     }
 
-    public Candidate(String name, String dateOfBirth, String address, String nationality) {
+    public Candidate(String name, String age, String healthRecord, String criminalRecord) {
         this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.address = address;
-        this.nationality = nationality;
+        this.age = age;
+        this.healthRecord = healthRecord;
+        this.criminalRecord = criminalRecord;
     }
 
     public String getName() {
@@ -33,28 +33,28 @@ public class Candidate extends Account {
         this.name = name;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
+    public String getAge() {
+        return age;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setAge(String age) {
+        this.age = age;
     }
 
-    public String getAddress() {
-        return address;
+    public String getHealthRecord() {
+        return healthRecord;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setHealthRecord(String healthRecord) {
+        this.healthRecord = healthRecord;
     }
 
-    public String getNationality() {
-        return nationality;
+    public String getCriminalRecord() {
+        return criminalRecord;
     }
 
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
+    public void setCriminalRecord(String criminalRecord) {
+        this.criminalRecord = criminalRecord;
     }
 
     public String getId() {
@@ -129,11 +129,11 @@ public class Candidate extends Account {
         this.languageSpoken = languageSpoken;
     }
 
-    public Candidate(String name, String dateOfBirth, String address, String nationality, String id, String gender, ArrayList<String> allergy, ArrayList<String> foodPreference, ArrayList<String> qualification, int workExperience, ArrayList<String> occupation, String computerSkill, ArrayList<String> languageSpoken) {
+    public Candidate(String name, String age, String healthRecord, String criminalRecord, String id, String gender, ArrayList<String> allergy, ArrayList<String> foodPreference, ArrayList<String> qualification, int workExperience, ArrayList<String> occupation, String computerSkill, ArrayList<String> languageSpoken) {
         this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.address = address;
-        this.nationality = nationality;
+        this.age = age;
+        this.healthRecord = healthRecord;
+        this.criminalRecord = criminalRecord;
         this.id = id;
         this.gender = gender;
         this.allergy = allergy;
