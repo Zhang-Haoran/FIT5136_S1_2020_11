@@ -19,6 +19,11 @@ public class Criteria {
     }
 
     public void setMaxAge(int maxAge) {
+        while (maxAge < minAge){
+            System.out.println("maximum of age cannot be smaller than minimum age. Please enter a valid age");
+            MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+            maxAge = missionToMarsSystem.userIntegerInput();
+        }
         this.maxAge = maxAge;
     }
 
@@ -27,7 +32,13 @@ public class Criteria {
     }
 
     public void setMinAge(int minAge) {
+        while (minAge > maxAge){
+            System.out.println("minimum of age cannot be greater than maximum age. Please enter a valid age");
+            MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+            minAge = missionToMarsSystem.userIntegerInput();
+        }
         this.minAge = minAge;
+
     }
 
     public ArrayList<String> getQualification() {

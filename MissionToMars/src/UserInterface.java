@@ -505,10 +505,10 @@ public class UserInterface {
     public MissionPlan displayEditCriteria(MissionRequest missionRequest,Account account,Employment employment,MissionPlan missionPlan){
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         System.out.println("******* Edit specific policy for"+ employment.getTitle() +" *******");
-        System.out.println("1. maximum age");
-        System.out.println("2. minimum age");
-        System.out.println("3. health record");
-        System.out.println("4. criminal record");
+        System.out.println("1. maximum age: " + missionPlan.getCriteria().getMaxAge());
+        System.out.println("2. minimum age: "+ missionPlan.getCriteria().getMinAge());
+        System.out.println("3. health record: " + missionPlan.getCriteria().getHealthRecord());
+        System.out.println("4. criminal record: "+ missionPlan.getCriteria().getCriminalRecord());
         System.out.println("Press 0 to go back to previous screen");
         System.out.println("Press -1 to go back to home screen");
         String userInput = missionToMarsSystem.userStringInput();
