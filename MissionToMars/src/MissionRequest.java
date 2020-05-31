@@ -150,4 +150,46 @@ public class MissionRequest {
                 ","+this.getDuration()+
                 ","+this.getStatus();
     }
+
+    public void statusDropDownList(){
+        ArrayList<String> missionStatusList = new ArrayList<>();
+        System.out.println("---Please select from: ");
+        missionStatusList.add("Planning phase");
+        missionStatusList.add("Departed Earth");
+        missionStatusList.add("Landed on Mars");
+        missionStatusList.add("Mission in progress");
+        missionStatusList.add("Returned to Earth");
+        missionStatusList.add("Mission completed");
+
+        for (int i = 0; i< missionStatusList.size();i++){
+            System.out.println(i+1+". "+missionStatusList.get(i));;
+        }
+
+        MissionToMarsSystem missionToMarsSystem =  new MissionToMarsSystem();
+        switch (missionToMarsSystem.userIntegerInput()){
+            case 1:
+                this.setStatus( missionStatusList.get(0));
+                break;
+            case 2:
+                this.setStatus( missionStatusList.get(1));
+                break;
+            case 3:
+                this.setStatus( missionStatusList.get(2));
+                break;
+            case 4:
+                this.setStatus( missionStatusList.get(3));
+                break;
+            case 5:
+                this.setStatus( missionStatusList.get(4));
+                break;
+            case 6:
+                this.setStatus( missionStatusList.get(5));
+                break;
+            default:
+                System.out.println("Please enter a valid option");
+                statusDropDownList();
+                break;
+        }
+    }
+
 }

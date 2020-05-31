@@ -106,7 +106,7 @@ public class UserInterface {
         System.out.println("--- 16. Please enter duration of mission (Press enter to save)" );
         missionRequest.setDuration(missionToMarsSystem.userStringInput());
         System.out.println("--- 17. Please enter status of mission (Press enter to save)" );
-        missionRequest.setStatus(missionToMarsSystem.userStringInput());
+        missionRequest.statusDropDownList();
         missionToMarsSystem.writeMissionRequestFile(missionRequest);
 
 
@@ -351,7 +351,7 @@ public class UserInterface {
                 break;
             case "17":
                 System.out.println("--- 17. Please enter status of mission (Press enter to save)" );
-                missionRequest.setStatus(missionToMarsSystem.userStringInput());
+                missionRequest.statusDropDownList();
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
