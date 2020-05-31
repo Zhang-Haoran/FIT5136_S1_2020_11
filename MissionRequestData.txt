@@ -4,3 +4,7 @@ Mission 3,establish a colony,Australia,Australia,Haoran,012345567,establish colo
 Mission 4,build school,China,China,yiwei,wechat,build road,build a big road,civil,1,discover,water,4,20/2/20,China,1,planning
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 mission44,s,s,s,s,s,s,s,s,2,1,1,1,1,1,1,1
+mission test,establish,us,us,simth,0004,builder,establish,4,8,g,g,8,20/05/20,us,100h,Planning phase
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Planning phase
+324,412,43214, 4,123,4 123, 412, 4123, 142,412,4 12, 412,4123, 412,1235,1324,Departed Earth
+gfhd,gadsgs,gaf,gaf,g ,gsd,gsgfd,gs,gsd,43,3425,sbdf,34,5gdsf,34,523,Planning phase

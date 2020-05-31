@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="age input validation added">
+    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="mission status drop down list added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MissionToMars/src/MissionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MissionToMars/src/MissionRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MissionToMars/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/MissionToMars/src/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MissionRequestData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MissionRequestData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,7 @@
       <workItem from="1590051431881" duration="4679000" />
       <workItem from="1590539411661" duration="3575000" />
       <workItem from="1590844386065" duration="10098000" />
-      <workItem from="1590889670129" duration="6186000" />
+      <workItem from="1590889670129" duration="6883000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1586344986398</created>
@@ -316,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590895094831</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="mission status drop down list added">
+      <created>1590896072033</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1590896072033</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +362,8 @@
     <MESSAGE value="validation added. system provide more feedback" />
     <MESSAGE value="bug fixed" />
     <MESSAGE value="age input validation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="age input validation added" />
+    <MESSAGE value="mission status drop down list added" />
+    <option name="LAST_COMMIT_MESSAGE" value="mission status drop down list added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="510" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589895964177">
@@ -395,22 +402,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="138" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590053481430" />
-    <state width="1493" height="344" key="GridCell.Tab.0.bottom" timestamp="1590895081991">
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom" timestamp="1590896517563">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="344" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590895081991" />
-    <state width="1493" height="344" key="GridCell.Tab.0.center" timestamp="1590895081991">
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590896517563" />
+    <state width="1493" height="234" key="GridCell.Tab.0.center" timestamp="1590896517562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="344" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590895081991" />
-    <state width="1493" height="344" key="GridCell.Tab.0.left" timestamp="1590895081991">
+    <state width="1493" height="234" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590896517562" />
+    <state width="1493" height="234" key="GridCell.Tab.0.left" timestamp="1590896517562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="344" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590895081991" />
-    <state width="1493" height="344" key="GridCell.Tab.0.right" timestamp="1590895081991">
+    <state width="1493" height="234" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590896517562" />
+    <state width="1493" height="234" key="GridCell.Tab.0.right" timestamp="1590896517563">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="344" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590895081991" />
+    <state width="1493" height="234" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590896517563" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590891242892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -427,10 +434,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590891242892" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590893011724">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590896079604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590893011724" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590896079604" />
     <state x="572" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590845451633">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -457,6 +464,15 @@
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590047325410" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MissionToMars/src/MissionToMarsSystem.java</url>
+          <line>260</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="missionPlan.criteria" />
