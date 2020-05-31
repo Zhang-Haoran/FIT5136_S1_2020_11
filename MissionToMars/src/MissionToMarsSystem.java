@@ -82,8 +82,8 @@ public class MissionToMarsSystem {
     public void login() {
         UserInterface userInterface = new UserInterface();
         readAccountFile();//at the beginning of login, read account data from database
-        String username;
-        String password;
+        String username = "";
+        String password = "";
 
         boolean isUserValid = false;
         userInterface.displayLoginScreen();
@@ -97,10 +97,10 @@ public class MissionToMarsSystem {
                 //find an account
                 isUserValid = true;
                 currentAccount = account;
-                System.out.println("You are successfully log in");
                 }
             }
         if (isUserValid){
+            System.out.println("You are successfully log in");
             //once user is valid, check their role to direct them to correct home screen
             if  (currentAccount.getRole().equals("Mission Coordinator")){
                 missionCoordinatorMenuControl(currentAccount);
