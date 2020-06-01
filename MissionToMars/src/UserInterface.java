@@ -99,11 +99,11 @@ public class UserInterface {
         cargo.setQuantityRequired(missionToMarsSystem.userIntegerInput());
         listOfCargo.add(cargo);//add new cargo into list
         missionRequest.setListOfCargo(listOfCargo);
-        System.out.println("--- 14. Please enter launch date (date format example: 20/05/2020) " );
+        System.out.println("--- 14. Please enter launch date (date format example: 01/06/2020) " );
         missionRequest.setLaunchDate(missionToMarsSystem.userStringInput());
         System.out.println("--- 15. Please enter location of destination (Press enter to save)" );
         missionRequest.setDestination(missionToMarsSystem.userStringInput());
-        System.out.println("--- 16. Please enter duration of mission (Press enter to save)" );
+        System.out.println("--- 16. Please enter duration of mission in years (input example: 2.15)" );
         missionRequest.setDuration(missionToMarsSystem.userStringInput());
         System.out.println("--- 17. Please enter status of mission (Press enter to save)" );
         missionRequest.statusDropDownList();

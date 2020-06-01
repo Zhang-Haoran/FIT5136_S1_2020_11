@@ -1,4 +1,8 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MissionRequest {
     private String name;
@@ -49,7 +53,14 @@ public class MissionRequest {
     }
 
     public void setName(String name) {
+        while (!name.matches("^[a-zA-Z ]+$")){
+
+            System.out.println("mission name must be string");
+            MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+            name = missionToMarsSystem.userStringInput();
+        }
         this.name = name;
+
     }
 
     public String getDescription() {
@@ -57,6 +68,12 @@ public class MissionRequest {
     }
 
     public void setDescription(String description) {
+        while (!(description.length() >=10)){
+
+            System.out.println("description must at least 10 words long");
+            MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+            description = missionToMarsSystem.userStringInput();
+        }
         this.description = description;
     }
 
@@ -105,6 +122,29 @@ public class MissionRequest {
     }
 
     public void setLaunchDate(String launchDate) {
+        Calendar calendar = Calendar.getInstance();// get a calendar using the current time zone and locale of the system. For example today is 10/05/2020, it will get 10,4, 2020
+        int calendarYear = calendar.get(Calendar.YEAR);
+        int calendarMonth = calendar.get(Calendar.MONTH)+1;
+        int caldendarDay = calendar.get(Calendar.DAY_OF_MONTH);
+        String currentDate = caldendarDay + "/" + calendarMonth + '/' + calendarYear;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        Date currentDateFormated = new Date();
+        while (true){
+            try {
+                if (
+                        (launchDate.matches("^([0-2][0-9]|(3)[0-1])(\\/)(((0)[0-9])|((1)[0-2]))(\\/)\\d{4}$"))
+                        && simpleDateFormat.parse(launchDate).after(currentDateFormated = simpleDateFormat.parse(currentDate))
+                )
+                    break;
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            System.out.println("launch date must be in the future and format like 01/06/2020. Please try again");
+            MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+            launchDate = missionToMarsSystem.userStringInput();
+        }
+
         this.launchDate = launchDate;
     }
 
