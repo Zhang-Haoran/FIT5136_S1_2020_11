@@ -153,6 +153,7 @@ public class MissionRequest {
     }
 
     public void setDestination(String destination) {
+
         this.destination = destination;
     }
 
@@ -161,6 +162,12 @@ public class MissionRequest {
     }
 
     public void setDuration(String duration) {
+        while (!duration.matches("^(([1-9]{1}\\d*)|(0{1}))(\\.\\d{1,2})?$")){
+
+            System.out.println("duration should be in years and two decimal points allowed");
+            MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+            duration = missionToMarsSystem.userStringInput();
+        }
         this.duration = duration;
     }
 
