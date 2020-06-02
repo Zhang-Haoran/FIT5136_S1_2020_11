@@ -89,11 +89,11 @@ public class UserInterface {
         employment.setNumberRequired(missionToMarsSystem.userIntegerInput());
         listOfEmployment.add(employment); // add new employment into list
         missionRequest.setListOfEmployment(listOfEmployment);
-        System.out.println("--- 11. Please enter cargo for what kind of mission (Press enter to save)" );
+        System.out.println("--- 11. Please enter what the cargo used for (Press enter to save)" );
         ArrayList<Cargo> listOfCargo = new ArrayList<>();//can store many cargo
         Cargo cargo = new Cargo();//potential problem: only create an cargo. should create many and store them in list
         cargo = missionRequest.cargoForDropDownList(cargo);
-        System.out.println("--- 12. Please enter cargo required to do what job (Press enter to save)" );
+        System.out.println("--- 12. Please enter cargo required for (example:concrete, desserts, water)" );
         cargo.setCargoRequired(missionToMarsSystem.userStringInput());
         System.out.println("--- 13. Please enter cargo quantity for (Press enter to save)" );
         cargo.setQuantityRequired(missionToMarsSystem.userIntegerInput());
@@ -314,13 +314,14 @@ public class UserInterface {
                 displayMissionModified(missionRequest,account);
                 break;
             case "11":
-                System.out.println("--- 11. Please enter cargo for what kind of mission (Press enter to save)" );
-                missionRequest.getListOfCargo().get(0).setCargoFor(missionToMarsSystem.userStringInput());
+                System.out.println("--- 11. Please enter what the cargo used for (Press enter to save)" );
+                Cargo cargo = missionRequest.cargoForDropDownList( missionRequest.getListOfCargo().get(0));
+                missionRequest.getListOfCargo().get(0).setCargoFor(cargo.getCargoFor());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "12":
-                System.out.println("--- 12. Please enter cargo required for (Press enter to save)" );
+                System.out.println("--- 12. Please enter cargo required for (example:concrete, desserts, water)" );
                 missionRequest.getListOfCargo().get(0).setCargoRequired(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
