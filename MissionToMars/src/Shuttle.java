@@ -70,4 +70,14 @@ public class Shuttle {
         return this.getName()+ ","+this.getManufacturingYear()+","+ this.getFuelCapacity()+ ","+ this.getCargoCapacity()+","+this.getTravelSpeed()+","+this.getPassengerCapacity();
 
     }
+
+    public void getPerfectRecord(Shuttle shuttle){
+        System.out.println("Shuttle details: ");
+        System.out.println("1.Shuttle name: "+ shuttle.getName());
+        System.out.println("2.Manufacturing year "+ shuttle.getManufacturingYear());
+        System.out.println("3.Fuel capacity: "+ shuttle.getFuelCapacity());
+        System.out.println("3.Passenger capacity: "+ shuttle.getPassengerCapacity());
+        System.out.println("4.Cargo capacity: "+ shuttle.getCargoCapacity());
+        System.out.println("5.Travel speed: "+ shuttle.getTravelSpeed());
+    }
 }

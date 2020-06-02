@@ -112,4 +112,12 @@ public class Criteria {
         return this.getMaxAge()+ ","+this.getMinAge()+","+this.getHealthRecord()+","+this.getCriminalRecord();
 
     }
+
+    public void getPrefectRecord(Criteria criteria){
+        System.out.println("Criteria details: ");
+        System.out.println("1. maximum age: " + criteria.getMaxAge());
+        System.out.println("2. minimum age: "+ criteria.getMinAge());
+        System.out.println("3. health record: " + criteria.getHealthRecord());
+        System.out.println("4. criminal record: "+ criteria.getCriminalRecord());
+    }
 }

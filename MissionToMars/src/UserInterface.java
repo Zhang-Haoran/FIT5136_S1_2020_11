@@ -92,8 +92,8 @@ public class UserInterface {
         System.out.println("--- 11. Please enter cargo for what kind of mission (Press enter to save)" );
         ArrayList<Cargo> listOfCargo = new ArrayList<>();//can store many cargo
         Cargo cargo = new Cargo();//potential problem: only create an cargo. should create many and store them in list
-        cargo.setCargoFor(missionToMarsSystem.userStringInput());
-        System.out.println("--- 12. Please enter cargo required for (Press enter to save)" );
+        cargo = missionRequest.cargoForDropDownList(cargo);
+        System.out.println("--- 12. Please enter cargo required to do what job (Press enter to save)" );
         cargo.setCargoRequired(missionToMarsSystem.userStringInput());
         System.out.println("--- 13. Please enter cargo quantity for (Press enter to save)" );
         cargo.setQuantityRequired(missionToMarsSystem.userIntegerInput());
@@ -248,7 +248,7 @@ public class UserInterface {
         System.out.println("17.Status of mission: "+ missionRequest.getStatus());
         System.out.println("Press 0 to go back to previous screen");
         System.out.println("Press -1 to go back to home screen");
-        System.out.println("Which attributes you want to modified?");
+        System.out.println("Which attributes you want to modify?");
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         String userInput = missionToMarsSystem.userStringInput();
         //let user select which attribute they want to change
@@ -505,6 +505,7 @@ public class UserInterface {
     public MissionPlan displayEditCriteria(MissionRequest missionRequest,Account account,Employment employment,MissionPlan missionPlan){
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         System.out.println("******* Edit specific policy for"+ employment.getTitle() +" *******");
+        System.out.println("Please enter your option: ");
         System.out.println("1. maximum age: " + missionPlan.getCriteria().getMaxAge());
         System.out.println("2. minimum age: "+ missionPlan.getCriteria().getMinAge());
         System.out.println("3. health record: " + missionPlan.getCriteria().getHealthRecord());
@@ -522,6 +523,7 @@ public class UserInterface {
                     missionToMarsSystem.administratorMenuControl(account);
                 }
                 missionPlan.getCriteria().setMaxAge(Integer.parseInt(userInput));
+                displayEditCriteria(missionRequest,account,employment,missionPlan);
                 break;
             case "2":
                 System.out.println("--- 2. Please enter minimum of age for this job (Press enter to save)");
@@ -531,6 +533,7 @@ public class UserInterface {
                     missionToMarsSystem.administratorMenuControl(account);
                 }
                 missionPlan.getCriteria().setMinAge(Integer.parseInt(userInput));
+                displayEditCriteria(missionRequest,account,employment,missionPlan);
                 break;
             case "3":
                 System.out.println("--- 3. Please enter requirement of health record(Press enter to save)");
@@ -540,6 +543,7 @@ public class UserInterface {
                     missionToMarsSystem.administratorMenuControl(account);
                 }
                 missionPlan.getCriteria().setHealthRecord(userInput);
+                displayEditCriteria(missionRequest,account,employment,missionPlan);
                 break;
             case "4":
                 System.out.println("--- 4. Please enter requirement of criminal record(Press enter to save)");
@@ -549,15 +553,18 @@ public class UserInterface {
                     missionToMarsSystem.administratorMenuControl(account);
                 }
                 missionPlan.getCriteria().setCriminalRecord(userInput);
+                displayEditCriteria(missionRequest,account,employment,missionPlan);
                 break;
             default:
                 System.out.println("Please enter a valid option:");
+                displayEditCriteria(missionRequest,account,employment,missionPlan);
                 break;
             case "0":
                 displayCriteriaModified(missionRequest,account,missionPlan);
                 break;
             case "-1":
-                displayMissionPlanNameList(account,"editCriteria",missionPlan);
+                missionToMarsSystem.missionPlan = missionPlan;
+                missionToMarsSystem.administratorMenuControl(account);
                 break;
         }
         return missionPlan;

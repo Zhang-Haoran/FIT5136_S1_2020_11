@@ -51,7 +51,7 @@ public class MissionToMarsSystem {
 
             }
             catch (InputMismatchException e){
-                System.out.println("Please input string");
+                System.out.println("Please enter a string");
             }
         }
 
@@ -72,7 +72,7 @@ public class MissionToMarsSystem {
             }
             catch (InputMismatchException e)
             {
-                System.out.println("Please input integer");
+                System.out.println("Please enter a integer");
             }
         }
 
@@ -362,23 +362,22 @@ public class MissionToMarsSystem {
         switch (userIntegerInput()){
             case 1:
                 createMissionRequest();
-                missionCoordinatorMenuControl(account);
                 break;
             case 2:
                 viewExistingMission(account);
-                missionCoordinatorMenuControl(account);
                 break;
             case 3:
                 editMissionRequest(account);
-                missionCoordinatorMenuControl(account);
                 break;
             case 4:
                 logout();
                 break;
             default:
                 System.out.println("Please enter the valid number");
+
                 break;
     }
+        missionCoordinatorMenuControl(account);
     }
 
     //admin 's main menu screen, they can select their action in this screen
@@ -395,14 +394,14 @@ public class MissionToMarsSystem {
                 break;
             case 3:
                 missionPlan = selectShuttle(account,missionPlan);
-                System.out.println("Mission Plan: \n" + missionPlan.getRecordAfterShuttle());
+                missionPlan.getRecordAfterShuttle();
                 break;
             case 4:
                 if (missionPlan.getShuttle() == null){
                     System.out.println("Please select shuttle for a mission first");
                 }else {
                     missionPlan = createSelectionCriteria(account,missionPlan);
-                    System.out.println("Mission Plan: \n" + missionPlan.getRecordAfterCriteria());
+                     missionPlan.getRecordAfterCriteria();
                 }
 
                 break;
@@ -412,7 +411,7 @@ public class MissionToMarsSystem {
                 }
                 else {
                     missionPlan = editSelectionCriteria(account,missionPlan);
-                    System.out.println("Mission Plan: \n" + missionPlan.getRecordAfterCriteria());
+                    missionPlan.getRecordAfterCriteria();
                 }
 
                 break;

@@ -57,12 +57,19 @@ public class MissionPlan {
         this.shuttle = shuttle;
     }
 
-    public String getRecordAfterShuttle(){
-        return "Mission details: "+this.getMissionRequest().getRecord()+ "\nShuttle Details: "+getShuttle().getRecord();
+    public void getRecordAfterShuttle(){
+        System.out.println("\nCurrent Mission Plan: ");
+         this.getMissionRequest().getPerfectRecord(getMissionRequest());
+        System.out.println("\n");
+         this.getShuttle().getPerfectRecord(getShuttle());
 
     }
-    public String getRecordAfterCriteria(){
-        return "Mission details: "+this.getMissionRequest().getRecord()+ "\nShuttle Details: "+getShuttle().getRecord()+ "\nCriteria Details: "+getCriteria().getRecord();
-
+    public void getRecordAfterCriteria(){
+        System.out.println("\nCurrent Mission Plan: ");
+        this.getMissionRequest().getPerfectRecord(getMissionRequest());
+        System.out.println("\n");
+        this.getShuttle().getPerfectRecord(getShuttle());
+        System.out.println("\n");
+        this.getCriteria().getPrefectRecord(getCriteria());
     }
 }
