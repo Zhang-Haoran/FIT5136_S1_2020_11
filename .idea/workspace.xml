@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="user manual added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MissionToMars/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/MissionToMars/src/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +123,8 @@
       <workItem from="1591092030055" duration="875000" />
       <workItem from="1591093064241" duration="4209000" />
       <workItem from="1591097841016" duration="8000" />
+      <workItem from="1591148695466" duration="832000" />
+      <workItem from="1591149599162" duration="326000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1586344986398</created>
@@ -469,30 +472,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="262" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589977692849" />
-    <state x="147" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1590055556956">
+    <state x="54" y="74" width="1228" height="687" key="DiffContextDialog" timestamp="1591147094452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" width="1228" height="687" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1590055556956" />
+    <state x="54" y="74" width="1228" height="687" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1591147094452" />
     <state x="549" y="138" key="FileChooserDialogImpl" timestamp="1591092526063">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="138" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591092526063" />
-    <state width="1493" height="665" key="GridCell.Tab.0.bottom" timestamp="1591097791466">
+    <state width="1493" height="346" key="GridCell.Tab.0.bottom" timestamp="1591149527731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="665" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591097791466" />
-    <state width="1493" height="665" key="GridCell.Tab.0.center" timestamp="1591097791465">
+    <state width="1493" height="346" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591149527731" />
+    <state width="1493" height="346" key="GridCell.Tab.0.center" timestamp="1591149527731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="665" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591097791465" />
-    <state width="1493" height="665" key="GridCell.Tab.0.left" timestamp="1591097791465">
+    <state width="1493" height="346" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591149527731" />
+    <state width="1493" height="346" key="GridCell.Tab.0.left" timestamp="1591149527731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="665" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591097791465" />
-    <state width="1493" height="665" key="GridCell.Tab.0.right" timestamp="1591097791466">
+    <state width="1493" height="346" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591149527731" />
+    <state width="1493" height="346" key="GridCell.Tab.0.right" timestamp="1591149527731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="665" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591097791466" />
+    <state width="1493" height="346" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591149527731" />
     <state width="1493" height="340" key="GridCell.Tab.1.bottom" timestamp="1591025600189">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -513,6 +516,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591097846563" />
+    <state x="503" y="146" key="VcsDiffUtil.ChangesDialog" timestamp="1591147098194">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="503" y="146" key="VcsDiffUtil.ChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1591147098194" />
     <state x="572" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590845451633">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -521,10 +528,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1589969826009" />
-    <state x="435" y="198" key="git4idea.merge.GitPullDialog" timestamp="1590055248511">
+    <state x="435" y="198" key="git4idea.merge.GitPullDialog" timestamp="1591149632978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="435" y="198" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1590055248511" />
+    <state x="435" y="198" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1591149632978" />
     <state x="513" y="310" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1590036456070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

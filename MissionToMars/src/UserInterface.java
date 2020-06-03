@@ -99,7 +99,7 @@ public class UserInterface {
         cargo.setQuantityRequired(missionToMarsSystem.userIntegerInput());
         listOfCargo.add(cargo);//add new cargo into list
         missionRequest.setListOfCargo(listOfCargo);
-        System.out.println("--- 14. Please enter launch date (date format example: 01/06/2020) " );
+        System.out.println("--- 14. Please enter launch date (date format example: 28/06/2020) " );
         missionRequest.setLaunchDate(missionToMarsSystem.userStringInput());
         System.out.println("--- 15. Please enter location of destination (Press enter to save)" );
         missionRequest.setDestination(missionToMarsSystem.userStringInput());
@@ -333,7 +333,7 @@ public class UserInterface {
                 displayMissionModified(missionRequest,account);
                 break;
             case "14":
-                System.out.println("--- 14. Please enter launch date (date format example: 20/05/2020) " );
+                System.out.println("--- 14. Please enter launch date (date format example: 28/06/2020) " );
                 missionRequest.setLaunchDate(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
