@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="user manual added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MissionToMars/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/MissionToMars/src/UserInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="mission name accept number" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +121,7 @@
       <workItem from="1591093064241" duration="4209000" />
       <workItem from="1591097841016" duration="8000" />
       <workItem from="1591148695466" duration="832000" />
-      <workItem from="1591149599162" duration="326000" />
+      <workItem from="1591149599162" duration="495000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1586344986398</created>
@@ -392,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591097776519</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="mission name accept number">
+      <created>1591150033484</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1591150033484</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +416,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="reset" />
     <MESSAGE value="about.html uploaded" />
     <MESSAGE value="about.html updated" />
     <MESSAGE value="all class initialized based on Class diagram" />
@@ -437,7 +440,8 @@
     <MESSAGE value="updated" />
     <MESSAGE value="userinterface updated" />
     <MESSAGE value="user manual added" />
-    <option name="LAST_COMMIT_MESSAGE" value="user manual added" />
+    <MESSAGE value="mission name accept number" />
+    <option name="LAST_COMMIT_MESSAGE" value="mission name accept number" />
   </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" timestamp="1591019052862">
@@ -480,22 +484,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="138" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591092526063" />
-    <state width="1493" height="346" key="GridCell.Tab.0.bottom" timestamp="1591149527731">
+    <state width="1493" height="346" key="GridCell.Tab.0.bottom" timestamp="1591150093902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="346" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591149527731" />
-    <state width="1493" height="346" key="GridCell.Tab.0.center" timestamp="1591149527731">
+    <state width="1493" height="346" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591150093902" />
+    <state width="1493" height="346" key="GridCell.Tab.0.center" timestamp="1591150093902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="346" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591149527731" />
-    <state width="1493" height="346" key="GridCell.Tab.0.left" timestamp="1591149527731">
+    <state width="1493" height="346" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591150093902" />
+    <state width="1493" height="346" key="GridCell.Tab.0.left" timestamp="1591150093902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="346" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591149527731" />
-    <state width="1493" height="346" key="GridCell.Tab.0.right" timestamp="1591149527731">
+    <state width="1493" height="346" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591150093902" />
+    <state width="1493" height="346" key="GridCell.Tab.0.right" timestamp="1591150093902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="346" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591149527731" />
+    <state width="1493" height="346" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591150093902" />
     <state width="1493" height="340" key="GridCell.Tab.1.bottom" timestamp="1591025600189">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -512,10 +516,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="340" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591025600189" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591097846563">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591150071601">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591097846563" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591150071601" />
     <state x="503" y="146" key="VcsDiffUtil.ChangesDialog" timestamp="1591147098194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
