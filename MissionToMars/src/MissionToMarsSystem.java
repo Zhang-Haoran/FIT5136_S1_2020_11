@@ -27,7 +27,7 @@ public class MissionToMarsSystem {
                 missionToMarsSystem.login();
                 break;
             default:
-                System.out.println("no such option. Please login");
+                System.out.println("invalid input. Please login");
                 missionToMarsSystem.login();
                 break;
         }
@@ -51,7 +51,7 @@ public class MissionToMarsSystem {
 
             }
             catch (InputMismatchException e){
-                System.out.println("Please enter a string");
+                System.out.println("invalid input. Please enter a valid input.");
             }
         }
 
@@ -72,7 +72,7 @@ public class MissionToMarsSystem {
             }
             catch (InputMismatchException e)
             {
-                System.out.println("Please enter a integer");
+                System.out.println("invalid input. Please enter a valid input.");
             }
         }
 
@@ -258,21 +258,27 @@ public class MissionToMarsSystem {
             FileReader inputFile = new FileReader("MissionRequestData.txt");
             Scanner parser = new Scanner(inputFile);
             while (parser.hasNextLine()) {//if the file still has content to read, read until file ends
-                String[] userData = parser.nextLine().split(",");//get each line, split by comma, get each attribute
-                //make these attributes into MissionRequest object, Mission request has many other class as its component
-                Country country = new Country(userData[2],userData[3]);
-                MissionCoordinator missionCoordinator = new MissionCoordinator(userData[4],userData[5],listOfMissionRequest);
-                Job job = new Job(userData[6],userData[7]);
-                Employment employment = new Employment(userData[8], Integer.parseInt(userData[9]));
-                ArrayList<Employment> listOfEmployment = new ArrayList<>();
-                listOfEmployment.add(employment);
-                Cargo cargo = new Cargo(userData[10],userData[11],Integer.parseInt(userData[12]));
-                ArrayList<Cargo> listOfCargo = new ArrayList<>();
-                listOfCargo.add(cargo);
-                //add Mission request object into list
-                listOfMissionRequest.add(new MissionRequest
-                        (userData[0],userData[1],country, job, missionCoordinator,listOfEmployment,listOfCargo,
-                        userData[13],userData[14],userData[15],userData[16]));
+                String line = parser.nextLine();
+                if (line.length() == 0){    //next line is empty do nothing
+
+                }
+                else {
+                    String[] userData =line.split(",");//get each line, split by comma, get each attribute
+                    //make these attributes into MissionRequest object, Mission request has many other class as its component
+                    Country country = new Country(userData[2], userData[3]);
+                    MissionCoordinator missionCoordinator = new MissionCoordinator(userData[4], userData[5], listOfMissionRequest);
+                    Job job = new Job(userData[6], userData[7]);
+                    Employment employment = new Employment(userData[8], Integer.parseInt(userData[9]));
+                    ArrayList<Employment> listOfEmployment = new ArrayList<>();
+                    listOfEmployment.add(employment);
+                    Cargo cargo = new Cargo(userData[10], userData[11], Integer.parseInt(userData[12]));
+                    ArrayList<Cargo> listOfCargo = new ArrayList<>();
+                    listOfCargo.add(cargo);
+                    //add Mission request object into list
+                    listOfMissionRequest.add(new MissionRequest
+                            (userData[0], userData[1], country, job, missionCoordinator, listOfEmployment, listOfCargo,
+                                    userData[13], userData[14], userData[15], userData[16]));
+                }
             }
             inputFile.close();
         } catch (FileNotFoundException e) {

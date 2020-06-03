@@ -93,9 +93,9 @@ public class UserInterface {
         ArrayList<Cargo> listOfCargo = new ArrayList<>();//can store many cargo
         Cargo cargo = new Cargo();//potential problem: only create an cargo. should create many and store them in list
         cargo = missionRequest.cargoForDropDownList(cargo);
-        System.out.println("--- 12. Please enter cargo required for (example:concrete, desserts, water)" );
+        System.out.println("--- 12. Please enter what cargo required for (example:concrete, desserts, water)" );
         cargo.setCargoRequired(missionToMarsSystem.userStringInput());
-        System.out.println("--- 13. Please enter cargo quantity for (Press enter to save)" );
+        System.out.println("--- 13. Please enter cargo quantity (Press enter to save)" );
         cargo.setQuantityRequired(missionToMarsSystem.userIntegerInput());
         listOfCargo.add(cargo);//add new cargo into list
         missionRequest.setListOfCargo(listOfCargo);
@@ -321,13 +321,13 @@ public class UserInterface {
                 displayMissionModified(missionRequest,account);
                 break;
             case "12":
-                System.out.println("--- 12. Please enter cargo required for (example:concrete, desserts, water)" );
+                System.out.println("--- 12. Please enter what cargo required for (example:concrete, desserts, water)" );
                 missionRequest.getListOfCargo().get(0).setCargoRequired(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "13":
-                System.out.println("--- 13. Please enter cargo quantity for (Press enter to save)" );
+                System.out.println("--- 13. Please enter cargo quantity (Press enter to save)" );
                 missionRequest.getListOfCargo().get(0).setQuantityRequired(missionToMarsSystem.userIntegerInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);

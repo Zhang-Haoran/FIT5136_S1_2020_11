@@ -53,14 +53,7 @@ public class MissionRequest {
     }
 
     public void setName(String name) {
-        while (!name.matches("^[a-zA-Z 0-9]+$")){
-
-            System.out.println("Mission name must be string");
-            MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
-            name = missionToMarsSystem.userStringInput();
-        }
         this.name = name;
-
     }
 
     public String getDescription() {
