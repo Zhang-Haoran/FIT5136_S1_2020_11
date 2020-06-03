@@ -51,7 +51,7 @@ public class MissionToMarsSystem {
 
             }
             catch (InputMismatchException e){
-                System.out.println("invalid input. Please enter a valid input.");
+                System.out.println("invalid input. Please try again");
             }
         }
 
@@ -72,7 +72,7 @@ public class MissionToMarsSystem {
             }
             catch (InputMismatchException e)
             {
-                System.out.println("invalid input. Please enter a valid input.");
+                System.out.println("invalid input. please enter a number.");
             }
         }
 

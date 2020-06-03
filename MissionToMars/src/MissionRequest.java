@@ -63,7 +63,7 @@ public class MissionRequest {
     public void setDescription(String description) {
         while (!(description.length() >=10)){
 
-            System.out.println("Description must be at least 10 words long");
+            System.out.println("Invalid description. Description must be at least 10 words long");
             MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
             description = missionToMarsSystem.userStringInput();
         }
@@ -133,7 +133,7 @@ public class MissionRequest {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            System.out.println("Launch date must be correct, in the future, and format like 01/06/2020. Please try again");
+            System.out.println("Invalid launch date.Please try again");
             MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
             launchDate = missionToMarsSystem.userStringInput();
         }
@@ -157,7 +157,7 @@ public class MissionRequest {
     public void setDuration(String duration) {
         while (!duration.matches("^(([1-9]{1}\\d*)|(0{1}))(\\.\\d{1,2})?$")){
 
-            System.out.println("duration should be in years and two decimal points allowed");
+            System.out.println("Invalid duration.Please try again");
             MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
             duration = missionToMarsSystem.userStringInput();
         }
