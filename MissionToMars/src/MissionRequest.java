@@ -55,7 +55,7 @@ public class MissionRequest {
     public void setName(String name) {
         while (!name.matches("^[a-zA-Z ]+$")){
 
-            System.out.println("mission name must be string");
+            System.out.println("Mission name must be string");
             MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
             name = missionToMarsSystem.userStringInput();
         }
@@ -70,7 +70,7 @@ public class MissionRequest {
     public void setDescription(String description) {
         while (!(description.length() >=10)){
 
-            System.out.println("description must at least 10 words long");
+            System.out.println("Description must be at least 10 words long");
             MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
             description = missionToMarsSystem.userStringInput();
         }
@@ -140,7 +140,7 @@ public class MissionRequest {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            System.out.println("launch date must be in the future and format like 01/06/2020. Please try again");
+            System.out.println("Launch date must be correct, in the future, and format like 01/06/2020. Please try again");
             MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
             launchDate = missionToMarsSystem.userStringInput();
         }
