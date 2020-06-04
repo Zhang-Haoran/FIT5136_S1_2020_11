@@ -221,7 +221,7 @@ public class UserInterface {
         System.out.println("16.Duration: "+ missionRequest.getDuration());
         System.out.println("17.Status of mission: "+ missionRequest.getStatus());
         Scanner scan = new Scanner(System.in);
-        System.out.print("Press any key to continue . . . ");
+        System.out.print("Press enter to continue . . . ");
         scan.nextLine();
     }
 
@@ -386,7 +386,7 @@ public class UserInterface {
             System.out.println(i+1+". "+listOfShuttle.get(i).getName());;
         }
         System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Press enter you option");
+        System.out.println("Press enter to commit you option");
 
         int userInput = missionToMarsSystem.userIntegerInput();
         //data validation. let user enter the number with the range
