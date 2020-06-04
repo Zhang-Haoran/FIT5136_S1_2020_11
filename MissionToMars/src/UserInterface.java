@@ -128,8 +128,8 @@ public class UserInterface {
         for (int i =0; i< listOfMissionRequest.size();i++){
             System.out.println(i+1+". "+listOfMissionRequest.get(i).getName());
         }
-        System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Please enter your option and press enter to commit.");
+        System.out.println("Input 0 to go back to previous screen");
+        System.out.println("Please input your option (Press Enter to commit your input):");
 
         int userInput = missionToMarsSystem.userIntegerInput();
 
@@ -171,7 +171,7 @@ public class UserInterface {
             System.out.println(i+1+". "+listOfMissionRequest.get(i).getName());
         }
         System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Please input you option and press enter to submit.");
+        System.out.println("Please input you option (Press enter to save)");
 
         int userInput = missionToMarsSystem.userIntegerInput();
 
@@ -247,112 +247,112 @@ public class UserInterface {
         System.out.println("15.Location of destination: "+ missionRequest.getDestination());
         System.out.println("16.Duration: "+ missionRequest.getDuration());
         System.out.println("17.Status of mission: "+ missionRequest.getStatus());
-        System.out.println("Enter 0 to go back to previous screen");
-        System.out.println("Enter -1 to go back to home screen");
+        System.out.println("Input 0 to go back to previous screen");
+        System.out.println("Input -1 to go back to home screen");
         System.out.println("Which attributes you want to modify? (Press enter to commit your selection)");
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         String userInput = missionToMarsSystem.userStringInput();
         //let user select which attribute they want to change
         switch (userInput){
             case "1":
-                System.out.println("--- 1. Please enter mission name (Press enter to save)" );
+                System.out.println("--- 1. Please input mission name (Press enter to save)" );
                 missionRequest.setName(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "2":
-                System.out.println("--- 2. Please enter mission description (Press enter to save)" );
+                System.out.println("--- 2. Please input mission description (Press enter to save)" );
                 missionRequest.setDescription(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "3":
-                System.out.println("--- 3. Please enter country of origin (Press enter to save)" );
+                System.out.println("--- 3. Please input country of origin (Press enter to save)" );
                 missionRequest.getCountry().setCountryOrigin(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "4":
-                System.out.println("--- 4. Please enter country allowed (Press enter to save)" );
+                System.out.println("--- 4. Please input country allowed (Press enter to save)" );
                 missionRequest.getCountry().setCountryAllowed(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "5":
-                System.out.println("--- 5. Please enter coordinator's name (Press enter to save)" );
+                System.out.println("--- 5. Please input coordinator's name (Press enter to save)" );
                 missionRequest.getMissionCoordinator().setName(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "6":
-                System.out.println("--- 6. Please enter coordinator's contact information (Press enter to save)" );
+                System.out.println("--- 6. Please input coordinator's contact information (Press enter to save)" );
                 missionRequest.getMissionCoordinator().setContactInfo(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "7":
-                System.out.println("--- 7. Please enter job name (Press enter to save)" );
+                System.out.println("--- 7. Please input job name (Press enter to save)" );
                 missionRequest.getJob().setName(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "8":
-                System.out.println("--- 8. Please enter job description (Press enter to save)" );
+                System.out.println("--- 8. Please input job description (Press enter to save)" );
                 missionRequest.getJob().setDescription(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "9":
-                System.out.println("--- 9. Please enter title of employment required (Press enter to save)" );
+                System.out.println("--- 9. Please input title of employment required (Press enter to save)" );
                 missionRequest.getListOfEmployment().get(0).setTitle(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "10":
-                System.out.println("--- 10. Please enter number of employment required (Press enter to save)" );
+                System.out.println("--- 10. Please input number of employment required (Press enter to save)" );
                 missionRequest.getListOfEmployment().get(0).setNumberRequired(missionToMarsSystem.userIntegerInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "11":
-                System.out.println("--- 11. Please enter what the cargo used for (Press enter to save)" );
+                System.out.println("--- 11. Please input what the cargo used for (Press enter to save)" );
                 Cargo cargo = missionRequest.cargoForDropDownList( missionRequest.getListOfCargo().get(0));
                 missionRequest.getListOfCargo().get(0).setCargoFor(cargo.getCargoFor());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "12":
-                System.out.println("--- 12. Please enter what cargo required for (example:concrete, desserts, water)" );
+                System.out.println("--- 12. Please input what cargo required for (example:concrete, desserts, water)" );
                 missionRequest.getListOfCargo().get(0).setCargoRequired(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "13":
-                System.out.println("--- 13. Please enter cargo quantity (Press enter to save)" );
+                System.out.println("--- 13. Please input cargo quantity (Press enter to save)" );
                 missionRequest.getListOfCargo().get(0).setQuantityRequired(missionToMarsSystem.userIntegerInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "14":
-                System.out.println("--- 14. Please enter launch date (date format example: 28/06/2020) " );
+                System.out.println("--- 14. Please input launch date (date format example: 28/06/2020) " );
                 missionRequest.setLaunchDate(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "15":
-                System.out.println("--- 15. Please enter location of destination (Press enter to save)" );
+                System.out.println("--- 15. Please input location of destination (Press enter to save)" );
                 missionRequest.setDestination(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "16":
-                System.out.println("--- 16. Please enter duration of mission (Press enter to save)" );
+                System.out.println("--- 16. Please input duration of mission (Press enter to save)" );
                 missionRequest.setDuration(missionToMarsSystem.userStringInput());
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
                 break;
             case "17":
-                System.out.println("--- 17. Please enter status of mission (Press enter to save)" );
+                System.out.println("--- 17. Please input status of mission (Press enter to save)" );
                 missionRequest.statusDropDownList();
                 missionToMarsSystem.modifyFile("MissionRequestData.txt",oldRecord,missionRequest.getRecord());
                 displayMissionModified(missionRequest,account);
@@ -366,7 +366,7 @@ public class UserInterface {
                 else {missionToMarsSystem.administratorMenuControl(account);}
                 break;
             default:
-                System.out.println("--- Please enter an valid option");
+                System.out.println("--- Please input a valid option");
                 displayMissionModified(missionRequest,account);
                 break;
 
@@ -386,8 +386,8 @@ public class UserInterface {
         for (int i = 0; i< listOfShuttle.size();i++){
             System.out.println(i+1+". "+listOfShuttle.get(i).getName());;
         }
-        System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Please input your option and press enter to commit.");
+        System.out.println("Input 0 to go back to previous screen");
+        System.out.println("Please input your option (Press enter to save):");
 
         int userInput = missionToMarsSystem.userIntegerInput();
         //data validation. let user enter the number with the range
@@ -414,8 +414,8 @@ public class UserInterface {
         System.out.println("3.Passenger capacity: "+ shuttle.getPassengerCapacity());
         System.out.println("4.Cargo capacity: "+ shuttle.getCargoCapacity());
         System.out.println("5.Travel speed: "+ shuttle.getTravelSpeed());
-        System.out.println("Enter 0 to go back to previous screen");
-        System.out.println("Enter -1 to confirm selection");
+        System.out.println("Input 0 to go back to previous screen");
+        System.out.println("Input -1 to confirm selection");
         int userInput = missionToMarsSystem.userIntegerInput();
         if (userInput == 0 ){
             displaySelectShuttleMenu(missionPlan.getMissionRequest(),account,missionPlan);
@@ -442,8 +442,8 @@ public class UserInterface {
         for (int i =0; i< missionRequest.getListOfEmployment().size();i++){
             System.out.println(i+1+". "+missionRequest.getListOfEmployment().get(i).getTitle());
         }
-        System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Press enter you option");
+        System.out.println("Input 0 to go back to previous screen");
+        System.out.println("Press enter you option (Press enter to save)");
 
         int userInput = missionToMarsSystem.userIntegerInput();
         //data validation. let user enter the number with the range
@@ -486,8 +486,8 @@ public class UserInterface {
         for (int i =0; i< missionRequest.getListOfEmployment().size();i++){
             System.out.println(i+1+". "+missionRequest.getListOfEmployment().get(i).getTitle());
         }
-        System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Press enter you option");
+        System.out.println("Input 0 to go back to previous screen");
+        System.out.println("Press enter you option (Press enter to save)");
 
         int userInput = missionToMarsSystem.userIntegerInput();
         //data validation. let user enter the number with the range
@@ -512,8 +512,8 @@ public class UserInterface {
         System.out.println("2. minimum age: "+ missionPlan.getCriteria().getMinAge());
         System.out.println("3. health record: " + missionPlan.getCriteria().getHealthRecord());
         System.out.println("4. criminal record: "+ missionPlan.getCriteria().getCriminalRecord());
-        System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Press -1 to go back to home screen");
+        System.out.println("Input 0 to go back to previous screen");
+        System.out.println("Input -1 to go back to home screen");
         String userInput = missionToMarsSystem.userStringInput();
         //let user select an attribute to edit
         switch (userInput){
@@ -538,7 +538,7 @@ public class UserInterface {
                 displayEditCriteria(missionRequest,account,employment,missionPlan);
                 break;
             case "3":
-                System.out.println("--- 3. Please enter requirement of health record(Press enter to save)");
+                System.out.println("--- 3. Please enter requirement of health record (Press enter to save)");
                 userInput = missionToMarsSystem.userStringInput();
                 if (missionPlan.getCriteria()  == null){
                     System.out.println("Please create criteria for a mission first");
@@ -548,7 +548,7 @@ public class UserInterface {
                 displayEditCriteria(missionRequest,account,employment,missionPlan);
                 break;
             case "4":
-                System.out.println("--- 4. Please enter requirement of criminal record(Press enter to save)");
+                System.out.println("--- 4. Please enter requirement of criminal record (Press enter to save)");
                 userInput = missionToMarsSystem.userStringInput();
                 if (missionPlan.getCriteria()  == null){
                     System.out.println("Please create criteria for a mission first");

@@ -157,7 +157,7 @@ public class MissionRequest {
     public void setDuration(String duration) {
         while (!duration.matches("^(([1-9]{1}\\d*)|(0{1}))(\\.\\d{1,2})?$")){
 
-            System.out.println("Invalid duration.Please try again");
+            System.out.println("Invalid duration.Please input duration in years with maximum two decimal places.");
             MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
             duration = missionToMarsSystem.userStringInput();
         }
