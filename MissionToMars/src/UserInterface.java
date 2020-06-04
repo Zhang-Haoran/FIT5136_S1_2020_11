@@ -12,6 +12,7 @@ public class UserInterface {
         System.out.println("--- Please enter the number below to select your option ");
         System.out.println("--- 1. Sign up for new candidates ");
         System.out.println("--- 2. Login to your account");
+        System.out.println("--- 3. Quit system");
         System.out.println("--- Enter your option (Press Enter to commit your input): ");
     }
 

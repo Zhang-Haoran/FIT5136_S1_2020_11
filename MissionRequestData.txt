@@ -3,3 +3,4 @@ Mission 2,establish a colony,Australia,Australia,Haoran,012345567,establish colo
 Mission 3,establish a colony,Australia,Australia,Haoran,012345567,establish colony,establish colony,civil engineers,5,jounery,desserts,15,11/11/2020,Mars colony,31,planning phase
 Mission 4,build school,China,China,yiwei,wechat,build road,build a big road,civil,1,discover,water,4,20/2/20,China,1,planning
 Mission one,build road on Mars,US,US,Michael,0123456789,build road,build road ,builder,5,For the mission,concrete,1,01/01/2025,Mars base,2.16,Mission completed
+nflkasngkans,sdflkgnsdklgnlksdnfg,gnlsdgnf,ndslkg,gnsdlkn,gsnldkgf,gnslk,sgfnldk,builder,1,For the journey,1,1,28/06/2020,1,2.15,Planning phase

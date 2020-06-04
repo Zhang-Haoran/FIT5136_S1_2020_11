@@ -14,6 +14,10 @@ public class MissionToMarsSystem {
     Account currentAccount = new Account();
     MissionPlan missionPlan = new MissionPlan();
     public static void main(String[] args) {
+       MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+       missionToMarsSystem.welcomeScreen();
+    }
+    public void welcomeScreen(){
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         UserInterface userInterface = new UserInterface();
         //display welcome screen
@@ -26,14 +30,18 @@ public class MissionToMarsSystem {
             case 2:
                 missionToMarsSystem.login();
                 break;
+            case 3:
+                quitSystem();
+                break;
             default:
                 System.out.println("invalid input. Please login");
                 missionToMarsSystem.login();
                 break;
         }
 
-
     }
+
+
     //user string input control
     public String userStringInput(){
         String userInput = "";
@@ -140,6 +148,10 @@ public class MissionToMarsSystem {
     }
     //user can logout to exit the system
     public void logout() {
+        System.out.println("Logging out");
+        welcomeScreen();
+    }
+    public void quitSystem(){
         System.out.println("Quitting the system");
         System.exit(0);
     }
