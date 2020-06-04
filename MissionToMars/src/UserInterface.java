@@ -128,7 +128,7 @@ public class UserInterface {
             System.out.println(i+1+". "+listOfMissionRequest.get(i).getName());
         }
         System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Press enter you option");
+        System.out.println("Please enter your option and press enter to commit.");
 
         int userInput = missionToMarsSystem.userIntegerInput();
 
@@ -170,7 +170,7 @@ public class UserInterface {
             System.out.println(i+1+". "+listOfMissionRequest.get(i).getName());
         }
         System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Press enter you option");
+        System.out.println("Please input you option and press enter to submit.");
 
         int userInput = missionToMarsSystem.userIntegerInput();
 
@@ -221,7 +221,7 @@ public class UserInterface {
         System.out.println("16.Duration: "+ missionRequest.getDuration());
         System.out.println("17.Status of mission: "+ missionRequest.getStatus());
         Scanner scan = new Scanner(System.in);
-        System.out.print("Press enter to continue . . . ");
+        System.out.print("Press Enter to continue . . . ");
         scan.nextLine();
     }
 
@@ -246,9 +246,9 @@ public class UserInterface {
         System.out.println("15.Location of destination: "+ missionRequest.getDestination());
         System.out.println("16.Duration: "+ missionRequest.getDuration());
         System.out.println("17.Status of mission: "+ missionRequest.getStatus());
-        System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Press -1 to go back to home screen");
-        System.out.println("Which attributes you want to modify?");
+        System.out.println("Enter 0 to go back to previous screen");
+        System.out.println("Enter -1 to go back to home screen");
+        System.out.println("Which attributes you want to modify? (Press enter to commit your selection)");
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         String userInput = missionToMarsSystem.userStringInput();
         //let user select which attribute they want to change
@@ -386,7 +386,7 @@ public class UserInterface {
             System.out.println(i+1+". "+listOfShuttle.get(i).getName());;
         }
         System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Press enter to commit you option");
+        System.out.println("Please input your option and press enter to commit.");
 
         int userInput = missionToMarsSystem.userIntegerInput();
         //data validation. let user enter the number with the range
@@ -413,8 +413,8 @@ public class UserInterface {
         System.out.println("3.Passenger capacity: "+ shuttle.getPassengerCapacity());
         System.out.println("4.Cargo capacity: "+ shuttle.getCargoCapacity());
         System.out.println("5.Travel speed: "+ shuttle.getTravelSpeed());
-        System.out.println("Press 0 to go back to previous screen");
-        System.out.println("Press -1 to confirm selection");
+        System.out.println("Enter 0 to go back to previous screen");
+        System.out.println("Enter -1 to confirm selection");
         int userInput = missionToMarsSystem.userIntegerInput();
         if (userInput == 0 ){
             displaySelectShuttleMenu(missionPlan.getMissionRequest(),account,missionPlan);
