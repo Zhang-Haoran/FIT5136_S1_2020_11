@@ -190,7 +190,7 @@ public class MissionRequest {
                 ","+this.getDuration()+
                 ","+this.getStatus();
     }
-
+//add different mission status
     public void statusDropDownList(){
         ArrayList<String> missionStatusList = new ArrayList<>();
         System.out.println("---Please select from: ");
@@ -231,7 +231,7 @@ public class MissionRequest {
                 break;
         }
     }
-
+//add cargo for the journey, mission or other missions
     public Cargo cargoForDropDownList(Cargo cargo){
         ArrayList<String> cargoForList = new ArrayList<>();
         System.out.println("---Please select from: ");
@@ -261,7 +261,7 @@ public class MissionRequest {
         }
         return cargo;
     }
-
+//display mission request details
     public void getPerfectRecord(MissionRequest missionRequest){
         System.out.println("MissionRequest details: ");
         System.out.println("1.Mission name: "+ missionRequest.getName());

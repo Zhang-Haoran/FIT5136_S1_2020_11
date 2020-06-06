@@ -163,7 +163,7 @@ public class MissionToMarsSystem {
         return missionPlan;
     }
 
-    //admin can create selection critera
+    //admin can create selection criteria
     public MissionPlan createSelectionCriteria(Account account,MissionPlan missionPlan){
         UserInterface userInterface = new UserInterface();
         missionPlan = userInterface.displayMissionPlanNameList(account,"criteria",missionPlan);
@@ -184,6 +184,7 @@ public class MissionToMarsSystem {
         ArrayList<Candidate> selectedCandidate = new ArrayList<>();
         listOfCandidate = readCandidateFile();
         System.out.println("Collecting candidate's criminal and health record from third party......downloading");
+        //get candidates information for candidate list
         for (int i = 0; i<listOfCandidate.size();i++){
             if (Integer.parseInt(listOfCandidate.get(i).getAge())
                     <= missionPlan.getCriteria().getMaxAge()

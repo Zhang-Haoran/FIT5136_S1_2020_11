@@ -71,6 +71,7 @@ public class Shuttle {
 
     }
 
+    //display shuttle details
     public void getPerfectRecord(Shuttle shuttle){
         System.out.println("Shuttle details: ");
         System.out.println("1.Shuttle name: "+ shuttle.getName());
