@@ -150,27 +150,6 @@ public class MissionRequest {
         this.destination = destination;
     }
 
-    public String getDuration() {
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        while (!duration.matches("^(([1-9]{1}\\d*)|(0{1}))(\\.\\d{1,2})?$")){
-
-            System.out.println("Invalid duration.Please input duration in years with maximum two decimal places.");
-            MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
-            duration = missionToMarsSystem.userStringInput();
-        }
-        this.duration = duration;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
     public String getRecord(){
         return this.getName()+
                 ","+this.getDescription()+
@@ -189,6 +168,31 @@ public class MissionRequest {
                 ","+this.getDestination()+
                 ","+this.getDuration()+
                 ","+this.getStatus();
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        while (!duration.matches("^(([1-9]{1}\\d*)|(0{1}))(\\.\\d{1,2})?$")){
+
+            System.out.println("Invalid duration.Please input duration in years with maximum two decimal places.");
+            MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
+            duration = missionToMarsSystem.userStringInput();
+        }
+        this.duration = duration;
+    }
+
+
+
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 //add different mission status
     public void statusDropDownList(){
@@ -231,7 +235,30 @@ public class MissionRequest {
                 break;
         }
     }
-//add cargo for the journey, mission or other missions
+
+//display mission request details
+    public void getPerfectRecord(MissionRequest missionRequest){
+        System.out.println("MissionRequest details: ");
+        System.out.println("1.Mission name: "+ missionRequest.getName());
+        System.out.println("2.Mission description: "+ missionRequest.getDescription());
+        System.out.println("3.Country of origin: "+ missionRequest.getCountry().getCountryOrigin());
+        System.out.println("4.Country allowed: "+ missionRequest.getCountry().getCountryAllowed());
+        System.out.println("5.Coordinator name: "+ missionRequest.getMissionCoordinator().getName());
+        System.out.println("6.Coordinator contact information: "+ missionRequest.getMissionCoordinator().getContactInfo());
+        System.out.println("7.Job name: "+ missionRequest.getJob().getName());
+        System.out.println("8.Job Description: "+ missionRequest.getJob().getDescription());
+        System.out.println("9.Title of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());//To fix: potential problem: only get first one
+        System.out.println("10.Number of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());
+        System.out.println("11.Cargo for what kind of mission: "+ missionRequest.getListOfCargo().get(0).getCargoFor());//To fix: potential problem: only get first one
+        System.out.println("12.Cargo required for: "+ missionRequest.getListOfCargo().get(0).getCargoRequired());
+        System.out.println("13.Cargo quantity: "+ missionRequest.getListOfCargo().get(0).getQuantityRequired());
+        System.out.println("14.Launch date:"+ missionRequest.getLaunchDate());
+        System.out.println("15.Location of destination: "+ missionRequest.getDestination());
+        System.out.println("16.Duration: "+ missionRequest.getDuration());
+        System.out.println("17.Status of mission: "+ missionRequest.getStatus());
+    }
+
+    //add cargo for the journey, mission or other missions
     public Cargo cargoForDropDownList(Cargo cargo){
         ArrayList<String> cargoForList = new ArrayList<>();
         System.out.println("---Please select from: ");
@@ -260,26 +287,5 @@ public class MissionRequest {
                 break;
         }
         return cargo;
-    }
-//display mission request details
-    public void getPerfectRecord(MissionRequest missionRequest){
-        System.out.println("MissionRequest details: ");
-        System.out.println("1.Mission name: "+ missionRequest.getName());
-        System.out.println("2.Mission description: "+ missionRequest.getDescription());
-        System.out.println("3.Country of origin: "+ missionRequest.getCountry().getCountryOrigin());
-        System.out.println("4.Country allowed: "+ missionRequest.getCountry().getCountryAllowed());
-        System.out.println("5.Coordinator name: "+ missionRequest.getMissionCoordinator().getName());
-        System.out.println("6.Coordinator contact information: "+ missionRequest.getMissionCoordinator().getContactInfo());
-        System.out.println("7.Job name: "+ missionRequest.getJob().getName());
-        System.out.println("8.Job Description: "+ missionRequest.getJob().getDescription());
-        System.out.println("9.Title of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());//To fix: potential problem: only get first one
-        System.out.println("10.Number of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());
-        System.out.println("11.Cargo for what kind of mission: "+ missionRequest.getListOfCargo().get(0).getCargoFor());//To fix: potential problem: only get first one
-        System.out.println("12.Cargo required for: "+ missionRequest.getListOfCargo().get(0).getCargoRequired());
-        System.out.println("13.Cargo quantity: "+ missionRequest.getListOfCargo().get(0).getQuantityRequired());
-        System.out.println("14.Launch date:"+ missionRequest.getLaunchDate());
-        System.out.println("15.Location of destination: "+ missionRequest.getDestination());
-        System.out.println("16.Duration: "+ missionRequest.getDuration());
-        System.out.println("17.Status of mission: "+ missionRequest.getStatus());
     }
 }
