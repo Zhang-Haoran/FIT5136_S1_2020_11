@@ -213,7 +213,7 @@ public class UserInterface {
         System.out.println("7.Job name: "+ missionRequest.getJob().getName());
         System.out.println("8.Job Description: "+ missionRequest.getJob().getDescription());
         System.out.println("9.Title of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());//To fix: potential problem: only get first one
-        System.out.println("10.Number of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());
+        System.out.println("10.Number of employment required: "+ missionRequest.getListOfEmployment().get(0).getNumberRequired());
         System.out.println("11.Cargo for what kind of mission: "+ missionRequest.getListOfCargo().get(0).getCargoFor());//To fix: potential problem: only get first one
         System.out.println("12.Cargo required for: "+ missionRequest.getListOfCargo().get(0).getCargoRequired());
         System.out.println("13.Cargo quantity: "+ missionRequest.getListOfCargo().get(0).getQuantityRequired());
@@ -239,7 +239,7 @@ public class UserInterface {
         System.out.println("7.Job name: "+ missionRequest.getJob().getName());
         System.out.println("8.Job Description: "+ missionRequest.getJob().getDescription());
         System.out.println("9.Title of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());//To fix: potential problem: only get first one
-        System.out.println("10.Number of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());
+        System.out.println("10.Number of employment required: "+ missionRequest.getListOfEmployment().get(0).getNumberRequired());
         System.out.println("11.Cargo for what kind of mission: "+ missionRequest.getListOfCargo().get(0).getCargoFor());//To fix: potential problem: only get first one
         System.out.println("12.Cargo required for: "+ missionRequest.getListOfCargo().get(0).getCargoRequired());
         System.out.println("13.Cargo quantity: "+ missionRequest.getListOfCargo().get(0).getQuantityRequired());
