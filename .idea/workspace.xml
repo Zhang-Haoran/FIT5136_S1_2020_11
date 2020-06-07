@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="configuration updated">
-      <change beforePath="$PROJECT_DIR$/readMe.docx" beforeDir="false" />
+    <list default="true" id="5a47efa9-14b4-4614-863a-a014507feb73" name="Default Changelist" comment="View mission updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MissionRequestData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MissionRequestData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +138,7 @@
       <workItem from="1591274681879" duration="4000" />
       <workItem from="1591276427361" duration="694000" />
       <workItem from="1591420820740" duration="3825000" />
+      <workItem from="1591500766017" duration="893000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1586344986398</created>
@@ -446,11 +448,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591425161555</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="View mission updated">
+      <created>1591500849637</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1591500849637</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -466,7 +475,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="user login added, each option for different actions added" />
     <MESSAGE value="feature 1 creating MissionRequest added, login and logout method added" />
     <MESSAGE value="view existing mission added" />
     <MESSAGE value="editing mission added" />
@@ -491,7 +499,8 @@
     <MESSAGE value="handline empty line in file" />
     <MESSAGE value="validation message updated" />
     <MESSAGE value="configuration updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="configuration updated" />
+    <MESSAGE value="View mission updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="View mission updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" timestamp="1591492032175">
@@ -536,22 +545,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="138" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591212414362" />
-    <state width="1493" height="665" key="GridCell.Tab.0.bottom" timestamp="1591276892710">
+    <state width="1493" height="665" key="GridCell.Tab.0.bottom" timestamp="1591501065183">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="665" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591276892710" />
-    <state width="1493" height="665" key="GridCell.Tab.0.center" timestamp="1591276892709">
+    <state width="1493" height="665" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591501065183" />
+    <state width="1493" height="665" key="GridCell.Tab.0.center" timestamp="1591501065183">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="665" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591276892709" />
-    <state width="1493" height="665" key="GridCell.Tab.0.left" timestamp="1591276892709">
+    <state width="1493" height="665" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591501065183" />
+    <state width="1493" height="665" key="GridCell.Tab.0.left" timestamp="1591501065182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="665" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591276892709" />
-    <state width="1493" height="665" key="GridCell.Tab.0.right" timestamp="1591276892709">
+    <state width="1493" height="665" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591501065182" />
+    <state width="1493" height="665" key="GridCell.Tab.0.right" timestamp="1591501065183">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="665" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591276892709" />
+    <state width="1493" height="665" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591501065183" />
     <state width="1493" height="452" key="GridCell.Tab.1.bottom" timestamp="1591271086282">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -572,11 +581,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591217027014" />
-    <state x="338" y="158" key="Vcs.Push.Dialog.v2" timestamp="1591425291012">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591500854281">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="338" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1591425291012" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591217056982" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591500854281" />
     <state x="503" y="146" key="VcsDiffUtil.ChangesDialog" timestamp="1591147098194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
