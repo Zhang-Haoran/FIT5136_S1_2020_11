@@ -84,7 +84,7 @@ public class UserInterface {
         missionRequest.setJob(job);
         System.out.println("--- 9. Please enter title of employment required (Press enter to save)" );
         ArrayList<Employment> listOfEmployment = new ArrayList<>();//can store many employment
-        Employment employment = new Employment();//potential problem: only create an employment. should create many and store them in list
+        Employment employment = new Employment();
         employment.setTitle(missionToMarsSystem.userStringInput());
         System.out.println("--- 10. Please enter number of employment required (Press enter to save)" );
         employment.setNumberRequired(missionToMarsSystem.userIntegerInput());
@@ -92,7 +92,7 @@ public class UserInterface {
         missionRequest.setListOfEmployment(listOfEmployment);
         System.out.println("--- 11. Please enter what the cargo used for (Press enter to save)" );
         ArrayList<Cargo> listOfCargo = new ArrayList<>();//can store many cargo
-        Cargo cargo = new Cargo();//potential problem: only create an cargo. should create many and store them in list
+        Cargo cargo = new Cargo();
         cargo = missionRequest.cargoForDropDownList(cargo);
         System.out.println("--- 12. Please enter what cargo required for (example:concrete, desserts, water)" );
         cargo.setCargoRequired(missionToMarsSystem.userStringInput());
@@ -212,9 +212,9 @@ public class UserInterface {
         System.out.println("6.Coordinator contact information: "+ missionRequest.getMissionCoordinator().getContactInfo());
         System.out.println("7.Job name: "+ missionRequest.getJob().getName());
         System.out.println("8.Job Description: "+ missionRequest.getJob().getDescription());
-        System.out.println("9.Title of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());//To fix: potential problem: only get first one
+        System.out.println("9.Title of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());
         System.out.println("10.Number of employment required: "+ missionRequest.getListOfEmployment().get(0).getNumberRequired());
-        System.out.println("11.Cargo for what kind of mission: "+ missionRequest.getListOfCargo().get(0).getCargoFor());//To fix: potential problem: only get first one
+        System.out.println("11.Cargo for what kind of mission: "+ missionRequest.getListOfCargo().get(0).getCargoFor());
         System.out.println("12.Cargo required for: "+ missionRequest.getListOfCargo().get(0).getCargoRequired());
         System.out.println("13.Cargo quantity: "+ missionRequest.getListOfCargo().get(0).getQuantityRequired());
         System.out.println("14.Launch date:"+ missionRequest.getLaunchDate());
@@ -238,9 +238,9 @@ public class UserInterface {
         System.out.println("6.Coordinator contact information: "+ missionRequest.getMissionCoordinator().getContactInfo());
         System.out.println("7.Job name: "+ missionRequest.getJob().getName());
         System.out.println("8.Job Description: "+ missionRequest.getJob().getDescription());
-        System.out.println("9.Title of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());//To fix: potential problem: only get first one
+        System.out.println("9.Title of employment required: "+ missionRequest.getListOfEmployment().get(0).getTitle());
         System.out.println("10.Number of employment required: "+ missionRequest.getListOfEmployment().get(0).getNumberRequired());
-        System.out.println("11.Cargo for what kind of mission: "+ missionRequest.getListOfCargo().get(0).getCargoFor());//To fix: potential problem: only get first one
+        System.out.println("11.Cargo for what kind of mission: "+ missionRequest.getListOfCargo().get(0).getCargoFor());
         System.out.println("12.Cargo required for: "+ missionRequest.getListOfCargo().get(0).getCargoRequired());
         System.out.println("13.Cargo quantity: "+ missionRequest.getListOfCargo().get(0).getQuantityRequired());
         System.out.println("14.Launch date:"+ missionRequest.getLaunchDate());
@@ -438,7 +438,6 @@ public class UserInterface {
         System.out.println("select a job title ");
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         //for the specified mission that user selected before, display all its job titles.
-        //To fix: current list only has one employment because in the creating step, i only create one employment object for convenience !!! otherwise using loop to create more employment
         for (int i =0; i< missionRequest.getListOfEmployment().size();i++){
             System.out.println(i+1+". "+missionRequest.getListOfEmployment().get(i).getTitle());
         }
@@ -469,9 +468,9 @@ public class UserInterface {
         System.out.println("--- 2. Please enter minimum of age for this job (Press enter to save)");
         criteria.setMinAge(missionToMarsSystem.userIntegerInput());
         System.out.println("--- 3. Please enter requirement of health record(Press enter to save)");
-        criteria.setHealthRecord(missionToMarsSystem.userStringInput());//To fix: potential problem: the heath record should get from third party
+        criteria.setHealthRecord(missionToMarsSystem.userStringInput());
         System.out.println("--- 4. Please enter requirement of criminal record(Press enter to save)");
-        criteria.setCriminalRecord(missionToMarsSystem.userStringInput());//To fix: potential problem: the heath record should get from third party
+        criteria.setCriminalRecord(missionToMarsSystem.userStringInput());
         missionPlan.setCriteria(criteria);
         return missionPlan;
     }
@@ -482,7 +481,6 @@ public class UserInterface {
         System.out.println("select a job title ");
         MissionToMarsSystem missionToMarsSystem = new MissionToMarsSystem();
         //for the specified mission that user selected before, display all its job titles.
-        //To fix: current list only has one employment because in the creating step, i only create one employment object for convenience !!! otherwise using loop to create more employment
         for (int i =0; i< missionRequest.getListOfEmployment().size();i++){
             System.out.println(i+1+". "+missionRequest.getListOfEmployment().get(i).getTitle());
         }

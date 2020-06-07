@@ -319,9 +319,9 @@ public class MissionToMarsSystem {
                     ","+missionRequest.getMissionCoordinator().getContactInfo()+
                     ","+missionRequest.getJob().getName()+
                     ","+missionRequest.getJob().getDescription()+
-                    ","+missionRequest.getListOfEmployment().get(0).getTitle()+ // potential problem: only can add first employment
+                    ","+missionRequest.getListOfEmployment().get(0).getTitle()+
                     ","+missionRequest.getListOfEmployment().get(0).getNumberRequired()+
-                    ","+missionRequest.getListOfCargo().get(0).getCargoFor()+ //potential problem: only can add first cargo
+                    ","+missionRequest.getListOfCargo().get(0).getCargoFor()+
                     ","+missionRequest.getListOfCargo().get(0).getCargoRequired()+
                     ","+missionRequest.getListOfCargo().get(0).getQuantityRequired()+
                     ","+missionRequest.getLaunchDate()+
@@ -350,9 +350,9 @@ public class MissionToMarsSystem {
                     ","+missionPlan.getMissionRequest().getMissionCoordinator().getContactInfo()+
                     ","+missionPlan.getMissionRequest().getJob().getName()+
                     ","+missionPlan.getMissionRequest().getJob().getDescription()+
-                    ","+missionPlan.getMissionRequest().getListOfEmployment().get(0).getTitle()+ // potential problem: only can add first employment
+                    ","+missionPlan.getMissionRequest().getListOfEmployment().get(0).getTitle()+
                     ","+missionPlan.getMissionRequest().getListOfEmployment().get(0).getNumberRequired()+
-                    ","+missionPlan.getMissionRequest().getListOfCargo().get(0).getCargoFor()+ //potential problem: only can add first cargo
+                    ","+missionPlan.getMissionRequest().getListOfCargo().get(0).getCargoFor()+
                     ","+missionPlan.getMissionRequest().getListOfCargo().get(0).getCargoRequired()+
                     ","+missionPlan.getMissionRequest().getListOfCargo().get(0).getQuantityRequired()+
                     ","+missionPlan.getMissionRequest().getLaunchDate()+
